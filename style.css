@@ -1,0 +1,20 @@
+:root {
+    --white: #fff;
+    --gold: #8B6A13;
+    --black: #000;
+    --fh1: 7vmin;
+    --fh2: 5vmin;
+    --fh3: 3.5vmin;
+    --fh4: 2vmin;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "Bahnschrift", "sans-serif", "serif";
+    font-size: 20px;
+    height: 100%;
+    width: 100vh;
+}
