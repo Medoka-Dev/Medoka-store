@@ -9,7 +9,7 @@ $fh4: 2vmin;
 
 @font-face {
   font-family: "default_font";
-  src: url("../fonts/BAHNSCHRIFT.TTF");
+  src: url("fonts/BAHNSCHRIFT.TTF");
 }
 
 * {
@@ -177,7 +177,7 @@ header {
 .services{
   width:100vw;
   height: 100vh;
-  background-image: url(img/party-cover.jpg);
+  background-image: url(../img/party-cover.jpg);
   background-size: cover;
 
 }
