@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "default_font";
+  src: url("fonts/BAHNSCHRIFT.TTF");
+}
+:root {
+  --white: #fff;
+  --gold: #8b6a13;
+  --black: #000;
+  --fh1: 7vmin;
+  --fh2: 5vmin;
+  --fh3: 3.5vmin;
+  --fh4: 2vmin;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "default_font", "sans-serif";
+  font-size: 20px;
+  height: 100%;
+  width: 100%;
+}
