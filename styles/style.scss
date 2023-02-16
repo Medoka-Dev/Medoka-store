@@ -40,6 +40,32 @@ header {
   background-size: cover;
   overflow: hidden;
 }
+.logo{
+  position: fixed;
+  float: left;
+  margin: 16px 36px;
+  color: $white;
+  font-weight: bold;
+  font-size: 24px;
+}
+nav{
+  position: fixed;
+}
+nav ul{
+  list-style: none;
+  overflow: hidden;
+  color: $white;
+  padding: 0;
+  text-align: center;
+  margin: 0;
+  transition: 1s;
+}
+nav.black ul{
+  background: $black;
+}
+nav ul li{
+  display: inline-block;
+}
 .img-holder
 {
   img{
