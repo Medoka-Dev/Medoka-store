@@ -1,0 +1,183 @@
+//* variables
+$white: #fff;
+$gold: #8b6a13;
+$black: #000;
+$fh1: 13vmin;
+$fh2: 5vmin;
+$fh3: 3.5vmin;
+$fh4: 2vmin;
+
+@font-face {
+  font-family: "default_font";
+  src: url("fonts/BAHNSCHRIFT.TTF");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "default_font", "sans-serif";
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 20px;
+}
+body
+{
+  overflow-x :hidden;
+}
+header {
+  width:100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: radial-gradient(
+    farthest-corner at 60px 60px,
+    #212121 0%,
+    black 100%
+  );
+  background-size: cover;
+  overflow: hidden;
+}
+.img-holder
+{
+  img{
+    $img-size: 40vmin;
+    height: $img-size;
+    width: $img-size;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .img-holder{
+    display:none;
+  }
+  .title-section{
+    text-align: center;
+  }
+}
+.title-section{
+  max-width: 900px;
+  h1{
+    margin: 0 20px;
+   font-size: $fh1;
+   color:$gold;
+  }
+  p{
+    margin: 0 10px;
+    font-size: $fh2;
+    color:$white;
+  }
+}
+//*start of stars
+@mixin sp-layout {
+  @media screen and (max-width: 750px) {
+    @content;
+  }
+}
+@function random_range($min, $max) {
+  $rand: random();
+  $random_range: $min + floor($rand * (($max - $min) + 1));
+  @return $random_range;
+}
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 80%;
+  transform: rotate(-25deg);
+}
+
+.star {
+  $star-count: 46;
+  --star-color: #8b6a13;
+  --star-tail-length: 6em;
+  --star-tail-height: 2px;
+  --star-width: calc(var(--star-tail-length) / 6);
+  --fall-duration: 9s;
+  --tail-fade-duration: var(--fall-duration);
+
+  position: absolute;
+  top: var(--top-offset);
+  left: 0;
+  width: var(--star-tail-length);
+  height: var(--star-tail-height);
+  color: var(--star-color);
+  background: linear-gradient(45deg, currentColor, transparent);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 6px currentColor);
+  transform: translate3d(104em, 0, 0);
+  animation: fall var(--fall-duration) var(--fall-delay) linear infinite, tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
+  
+  @include sp-layout {
+    // For mobile performance, tail-fade animation will be removed QAQ
+    animation: fall var(--fall-duration) var(--fall-delay) linear infinite;
+  }
+
+  @for $i from 1 through $star-count {
+    &:nth-child(#{$i}) {
+      --star-tail-length: #{random_range(500em, 750em) / 100};
+      --top-offset: #{random_range(0vh, 10000vh) / 100};
+      --fall-duration: #{random_range(6000, 12000s) / 1000};
+      --fall-delay: #{random_range(0, 10000s) / 1000};
+    }
+  }
+
+  &::before, &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: calc(var(--star-width) / -2);
+    width: var(--star-width);
+    height: 100%;
+    background: linear-gradient(45deg, transparent, currentColor, transparent);
+    border-radius: inherit;
+    animation: blink 2s linear infinite;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes fall {
+  to {
+    transform: translate3d(-30em, 0, 0);
+  }
+}
+
+@keyframes tail-fade {
+  0%, 50% {
+    width: var(--star-tail-length);
+    opacity: 1;
+  }
+
+  70%, 80% {
+    width: 0;
+    opacity: 0.4;
+  }
+
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.6;
+  }
+}
+//*end of stars
+.services{
+  width:100vw;
+  height: 100vh;
+  background-image: url(img/party-cover.jpg);
+  background-size: cover;
+
+}
