@@ -22,52 +22,104 @@ $fh4: 2vmin;
   scroll-behavior: smooth;
   font-size: 20px;
 }
-body
-{
-  overflow-x :hidden;
+
+body {
+  overflow-x: hidden;
 }
+
 header {
-  width:100vw;
+  position: fixed;
+  width: 100vw;
   height: 100vh;
+  top: 0;
+  right: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-image: radial-gradient(
-    farthest-corner at 60px 60px,
-    #212121 0%,
-    black 100%
-  );
+  background-image: radial-gradient(farthest-corner at 60px 60px,
+      #212121 0%,
+      black 100%);
   background-size: cover;
   overflow: hidden;
 }
-.img-holder
-{
-  img{
+
+.img-holder {
+  img {
     $img-size: 40vmin;
     height: $img-size;
     width: $img-size;
   }
 }
+
 @media only screen and (max-width: 900px) {
-  .img-holder{
-    display:none;
+  .img-holder {
+    display: none;
   }
-  .title-section{
+
+}
+
+.title-section {
+  max-width: 900px;
+  justify-content: center;
+  p{
     text-align: center;
   }
+  
 }
-.title-section{
-  max-width: 900px;
-  h1{
-    margin: 0 20px;
-   font-size: $fh1;
-   color:$gold;
-  }
-  p{
-    margin: 0 10px;
-    font-size: $fh2;
-    color:$white;
-  }
+.viabtn {
+  display: flex;
+}
+
+.box {
+  width: 70px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: $white;
+  transition: all .8s;
+  cursor: pointer;
+  position: relative;
+  background: $gold;
+  overflow: hidden;
+}
+
+.box:before {
+  content: "W";
+  position: absolute;
+  top: 0;
+  background: #161616;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100%);
+  transition: transform .4s;
+}
+
+.box:nth-child(2)::before {
+  transform: translateY(-100%);
+  content: 'O';
+}
+
+.box:nth-child(3)::before {
+  content: 'R';
+}
+
+.box:nth-child(4)::before {
+  transform: translateY(-100%);
+  content: 'L';
+}
+
+.box:nth-child(5)::before {
+  content: 'D';
+}
+
+.viabtn:hover .box:before {
+  transform: translateY(0);
 }
 //*start of stars
 @mixin sp-layout {
@@ -75,11 +127,13 @@ header {
     @content;
   }
 }
+
 @function random_range($min, $max) {
   $rand: random();
-  $random_range: $min + floor($rand * (($max - $min) + 1));
+  $random_range: $min +floor($rand * (($max - $min) + 1));
   @return $random_range;
 }
+
 .stars {
   position: absolute;
   top: 0;
@@ -109,7 +163,7 @@ header {
   filter: drop-shadow(0 0 6px currentColor);
   transform: translate3d(104em, 0, 0);
   animation: fall var(--fall-duration) var(--fall-delay) linear infinite, tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
-  
+
   @include sp-layout {
     // For mobile performance, tail-fade animation will be removed QAQ
     animation: fall var(--fall-duration) var(--fall-delay) linear infinite;
@@ -124,7 +178,8 @@ header {
     }
   }
 
-  &::before, &::after {
+  &::before,
+  &::after {
     position: absolute;
     content: '';
     top: 0;
@@ -152,12 +207,15 @@ header {
 }
 
 @keyframes tail-fade {
-  0%, 50% {
+
+  0%,
+  50% {
     width: var(--star-tail-length);
     opacity: 1;
   }
 
-  70%, 80% {
+  70%,
+  80% {
     width: 0;
     opacity: 0.4;
   }
@@ -173,9 +231,10 @@ header {
     opacity: 0.6;
   }
 }
+
 //*end of stars
-.services{
-  width:100vw;
+.services {
+  width: 100vw;
   height: 100vh;
   background-image: url(img/party-cover.jpg);
   background-size: cover;
