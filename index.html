@@ -17,6 +17,8 @@
         <li><a href="#">Services</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
+      <input type="button">
+      <input type="button">
     </nav>
     <header>
       <div class="stars">
@@ -77,5 +79,15 @@
     <div class="services">
 
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script>
+        $(window).scroll(function(){
+          if ($(window).scrollTop()){
+            $('nav').addClass("black");
+          }
+          else $('nav').removeClass("black");
+        });
+
+    </script>
   </body>
 </html>
