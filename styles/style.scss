@@ -49,17 +49,18 @@ header {
 }
 nav{
   position: fixed;
-}
-nav ul{
+  transition: 1s;
+  display: flex;
+  align-items: center;
   list-style: none;
   overflow: hidden;
   color: $white;
   padding: 0;
   text-align: center;
   margin: 0;
-  transition: 1s;
+  width: 100vw;
 }
-nav.black ul{
+nav.black{
   background: $black;
 }
 nav ul li{
@@ -72,6 +73,16 @@ nav ul li a{
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+.btns{
+justify-content: flex-end;
+}
+.login, .sign{
+  background-color: transparent;
+  border-radius: 30px;
+  color: $gold;
+  border-color: $gold;
+  padding: 15px;
 }
 .img-holder
 {
