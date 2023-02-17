@@ -22,6 +22,19 @@ $fh4: 2vmin;
   scroll-behavior: smooth;
   font-size: 20px;
 }
+//*btns styles
+.btn-r {
+  border: transparent;
+  border-radius: 5px;
+  color:$white;
+  background-color: $gold;
+  padding: 10px 15px;
+  transition:0.3s;
+  &:hover{
+    background-color: lighten($gold,5%);
+  }
+}
+//*end of btns
 body {
   overflow-x: hidden;
 }
@@ -80,15 +93,13 @@ nav {
   }
   .btns{
     flex-basis: 200px;
+    white-space: nowrap;
+    display: block;
+    padding-top: 10px;
+    button{
+      margin:0px 5px; 
+    }
   }
-}
-.login,
-.sign {
-  background-color: transparent;
-  border-radius: 30px;
-  color: $gold;
-  border-color: $gold;
-  padding: 15px;
 }
 .img-holder {
   img {
@@ -230,6 +241,6 @@ nav {
 .services {
   width: 100vw;
   height: 100vh;
-  background-image: url(img/party-cover.jpg);
+  background-image: url(img/party-cover-gold.jpg);
   background-size: cover;
 }
