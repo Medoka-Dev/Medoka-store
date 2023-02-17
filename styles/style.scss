@@ -22,12 +22,11 @@ $fh4: 2vmin;
   scroll-behavior: smooth;
   font-size: 20px;
 }
-body
-{
-  overflow-x :hidden;
+body {
+  overflow-x: hidden;
 }
 header {
-  width:100vw;
+  width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: space-around;
@@ -40,76 +39,83 @@ header {
   background-size: cover;
   overflow: hidden;
 }
-.logo{
+.logo {
   float: left;
   margin: 16px 36px;
   width: 80.5px;
   height: 35px;
 }
-nav{
+nav {
+  z-index: 50;
   position: fixed;
   transition: 1s;
   display: flex;
-  align-items: center;
-  list-style: none;
-  overflow: hidden;
+  align-items: stretch;
   color: $white;
-  padding: 0;
-  text-align: center;
   margin: 0;
   width: 100vw;
+  &.black {
+    background-color: #000;
+  }
+  a {
+    flex-basis: 150px;
+  }
+  ul {
+    flex-grow: 5;
+    li {
+      display: inline-block;
+      padding: 20px;
+      a {
+        text-decoration: none;
+        color: $white;
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        &:hover{
+          color:$gold;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+  .btns{
+    flex-basis: 200px;
+  }
 }
-nav.black{
-  background: $black;
-}
-nav ul li{
-  display: inline-block;
-  padding: 20px;
-}
-nav ul li a{
-  text-decoration: none;
-  color: $white;
-  font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-.btns{
-justify-content: flex-end;
-}
-.login, .sign{
+.login,
+.sign {
   background-color: transparent;
   border-radius: 30px;
   color: $gold;
   border-color: $gold;
   padding: 15px;
 }
-.img-holder
-{
-  img{
+.img-holder {
+  img {
     $img-size: 40vmin;
     height: $img-size;
     width: $img-size;
   }
 }
 @media only screen and (max-width: 900px) {
-  .img-holder{
-    display:none;
+  .img-holder {
+    display: none;
   }
-  .title-section{
+  .title-section {
     text-align: center;
   }
 }
-.title-section{
+.title-section {
   max-width: 900px;
-  h1{
+  h1 {
     margin: 0 20px;
-   font-size: $fh1;
-   color:$gold;
+    font-size: $fh1;
+    color: $gold;
   }
-  p{
+  p {
     margin: 0 10px;
     font-size: $fh2;
-    color:$white;
+    color: $white;
   }
 }
 //*start of stars
@@ -151,8 +157,9 @@ justify-content: flex-end;
   border-radius: 50%;
   filter: drop-shadow(0 0 6px currentColor);
   transform: translate3d(104em, 0, 0);
-  animation: fall var(--fall-duration) var(--fall-delay) linear infinite, tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
-  
+  animation: fall var(--fall-duration) var(--fall-delay) linear infinite,
+    tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
+
   @include sp-layout {
     // For mobile performance, tail-fade animation will be removed QAQ
     animation: fall var(--fall-duration) var(--fall-delay) linear infinite;
@@ -167,9 +174,10 @@ justify-content: flex-end;
     }
   }
 
-  &::before, &::after {
+  &::before,
+  &::after {
     position: absolute;
-    content: '';
+    content: "";
     top: 0;
     left: calc(var(--star-width) / -2);
     width: var(--star-width);
@@ -195,12 +203,14 @@ justify-content: flex-end;
 }
 
 @keyframes tail-fade {
-  0%, 50% {
+  0%,
+  50% {
     width: var(--star-tail-length);
     opacity: 1;
   }
 
-  70%, 80% {
+  70%,
+  80% {
     width: 0;
     opacity: 0.4;
   }
@@ -217,10 +227,9 @@ justify-content: flex-end;
   }
 }
 //*end of stars
-.services{
-  width:100vw;
+.services {
+  width: 100vw;
   height: 100vh;
   background-image: url(img/party-cover.jpg);
   background-size: cover;
-
 }
