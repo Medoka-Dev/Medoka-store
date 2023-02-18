@@ -22,7 +22,7 @@ $fh4: 2vmin;
   scroll-behavior: smooth;
   font-size: 20px;
 }
-//*btns styles
+//*account-info styles
 .btn-r {
   border: transparent;
   border-radius: 5px;
@@ -34,8 +34,9 @@ $fh4: 2vmin;
     background-color: lighten($gold,5%);
   }
 }
-//*end of btns
-body {
+//*end of account-info
+.the_horse_bug{
+  position:absolute;
   overflow-x: hidden;
 }
 header {
@@ -45,7 +46,7 @@ header {
   justify-content: space-around;
   align-items: center;
   background-image: radial-gradient(
-    farthest-corner at 60px 60px,
+    farthest-corner at 3vw 5vh,
     #212121 0%,
     black 100%
   );
@@ -61,11 +62,11 @@ header {
 nav {
   z-index: 50;
   position: fixed;
-  transition: 1s;
   display: flex;
   align-items: stretch;
   color: $white;
   margin: 0;
+  height: 70px;
   width: 100vw;
   &.black {
     background-color: #000;
@@ -75,6 +76,7 @@ nav {
   }
   ul {
     flex-grow: 5;
+    white-space: nowrap;
     li {
       display: inline-block;
       padding: 20px;
@@ -91,7 +93,7 @@ nav {
       }
     }
   }
-  .btns{
+  .account-info{
     flex-basis: 200px;
     white-space: nowrap;
     display: block;
@@ -100,12 +102,47 @@ nav {
       margin:0px 5px; 
     }
   }
+  #menu-icon{
+    position:fixed;
+    top:35px;
+    right:20px;
+    cursor:pointer;
+    display:none;
+  }
+}
+.sidebar{
+  overflow: hidden;
+  transition: 0.2s;
+  background-color: $black;
+  opacity: 0.9;
+  position: fixed;
+  top:70px;
+  left:0;
+  height: 100vh;
+  width: 0px;
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .img-holder {
   img {
     $img-size: 40vmin;
     height: $img-size;
     width: $img-size;
+  }
+}
+@media only screen and (max-width: 750px) {
+  nav{
+    .navlist{
+      display:none;
+    }
+    div.account-info{
+      display:none !important;
+    }
+  }
+  #menu-icon{
+    display:initial !important;
   }
 }
 @media only screen and (max-width: 900px) {
@@ -241,6 +278,10 @@ nav {
 .services {
   width: 100vw;
   height: 100vh;
-  background-image: url(img/party-cover-gold.jpg);
+  background-image: radial-gradient(
+    farthest-corner at 97vw 95vh,
+    #212121 0%,
+    black 100%
+  );
   background-size: cover;
 }
