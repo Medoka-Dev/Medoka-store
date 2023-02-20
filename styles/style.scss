@@ -22,7 +22,7 @@ $fh4: 2vmin;
   scroll-behavior: smooth;
   font-size: 20px;
 }
-//*account-info styles
+//*btns styles
 .btn-r {
   border: transparent;
   border-radius: 5px;
@@ -34,10 +34,10 @@ $fh4: 2vmin;
     background-color: lighten($gold,5%);
   }
 }
-//*end of account-info
+//*end of btns
 .the_horse_bug{
   position:absolute;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 header {
   width: 100vw;
