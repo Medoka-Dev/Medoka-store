@@ -26,17 +26,17 @@ $fh4: 2vmin;
 .btn-r {
   border: transparent;
   border-radius: 5px;
-  color:$white;
+  color: $white;
   background-color: $gold;
   padding: 10px 15px;
-  transition:0.3s;
-  &:hover{
-    background-color: lighten($gold,5%);
+  transition: 0.3s;
+  &:hover {
+    background-color: lighten($gold, 5%);
   }
 }
 //*end of btns
-.the_horse_bug{
-  position:absolute;
+.the_horse_bug {
+  position: absolute;
   overflow: hidden;
 }
 header {
@@ -59,18 +59,21 @@ header {
   width: 80.5px;
   height: 35px;
 }
+#navbar {
+  top: 0;
+  transition: 0.2s;
+  background-color: $black;
+  opacity: 0.9;
+}
 nav {
+  height: 70px;
   z-index: 50;
   position: fixed;
   display: flex;
   align-items: stretch;
   color: $white;
   margin: 0;
-  height: 70px;
   width: 100vw;
-  &.black {
-    background-color: #000;
-  }
   a {
     flex-basis: 150px;
   }
@@ -86,38 +89,39 @@ nav {
         font-size: 18px;
         text-transform: uppercase;
         letter-spacing: 2px;
-        &:hover{
-          color:$gold;
+        &:hover {
+          color: $gold;
           transition: 0.5s;
         }
       }
     }
   }
-  .account-info{
+  .account-info {
     flex-basis: 200px;
     white-space: nowrap;
     display: block;
     padding-top: 10px;
-    button{
-      margin:0px 5px; 
+    button {
+      margin: 0px 5px;
     }
   }
-  #menu-icon{
-    position:fixed;
-    top:35px;
-    right:20px;
-    cursor:pointer;
-    display:none;
+  #menu-icon {
+    transition: 0.2s;
+    position: fixed;
+    top: 35px;
+    right: 20px;
+    cursor: pointer;
+    display: none;
   }
 }
-.sidebar{
+.sidebar {
   overflow: hidden;
   transition: 0.2s;
   background-color: $black;
   opacity: 0.9;
   position: fixed;
-  top:70px;
-  left:0;
+  top: 70px;
+  left: 0;
   height: 100vh;
   width: 0px;
   ul {
@@ -133,16 +137,16 @@ nav {
   }
 }
 @media only screen and (max-width: 750px) {
-  nav{
-    .navlist{
-      display:none;
+  nav {
+    .navlist {
+      display: none;
     }
-    div.account-info{
-      display:none !important;
+    div.account-info {
+      display: none !important;
     }
   }
-  #menu-icon{
-    display:initial !important;
+  #menu-icon {
+    display: initial !important;
   }
 }
 @media only screen and (max-width: 900px) {
