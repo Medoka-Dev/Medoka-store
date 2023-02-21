@@ -287,6 +287,21 @@ nav {
   }
 }
 //*end of stars
+
+//*about section
+.home {
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient(
+    farthest-corner at 97vw 95vh,
+    #212121 0%,
+    black 100%
+  );
+  background-size: cover;
+}
+
+
+//*Services section
 .services {
   width: 100vw;
   height: 100vh;
@@ -297,6 +312,8 @@ nav {
   );
   background-size: cover;
 }
+
+
 //*Scroll to top button
 .scrolltop {
 	display:none;

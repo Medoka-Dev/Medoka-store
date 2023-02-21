@@ -12,11 +12,11 @@
   <div class="the_horse_bug">
     <body onresize="close_sidebar()">
       <nav id="navbar" onresize="close_sidebar()">
-        <a href="#"><img src="styles/img/logo.png" class="logo" /></a>
+        <a href="#home"><img src="styles/img/logo.png" class="logo" /></a>
         <ul class="navlist">
           <li><a href="#home">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
         <div class="account-info">
@@ -28,9 +28,9 @@
         <i class="fa fa-bars fa-2xl" id="menu-icon" onclick="open_sidebar()"></i>
         <div class="sidebar" id="sidebar">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
         </div>
@@ -90,7 +90,8 @@
           </p>
         </div>
       </header>
-      <div class="services"></div>
+      <div id="about" class="about"></div>
+      <div id="services" class="services"></div>
       <!-- jQuery CDN -->
       <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
       <!-- fontawsome CDN -->
