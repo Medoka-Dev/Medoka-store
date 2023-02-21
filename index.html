@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/style.css" />
+    <!--bootstrap for scroll to top button-->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <title>Via World</title>
   </head>
   <div class="the_horse_bug">
@@ -12,7 +14,7 @@
       <nav id="navbar" onresize="close_sidebar()">
         <a href="#"><img src="styles/img/logo.png" class="logo" /></a>
         <ul class="navlist">
-          <li><a href="#">Home</a></li>
+          <li><a href="#home">Home</a></li>
           <li><a href="#">About Us</a></li>
           <li><a href="#">Services</a></li>
           <li><a href="#">Contact</a></li>
@@ -33,7 +35,7 @@
           </ul>
         </div>
       </nav>
-      <header>
+      <header class="home" id="home">
         <div class="stars">
           <div class="star"></div>
           <div class="star"></div>
@@ -82,7 +84,7 @@
           <div class="star"></div>
         </div>
         <div class="title-section">
-          <img src="styles/img/via.png" width="703px" height="118.5px">
+          <img src="styles/img/via.png"  >
           <p>
             Lorem ipsum dolor sit amet.
           </p>
@@ -97,4 +99,8 @@
       <script src="main.js"></script>
     </body>
   </div>
+  <!--Scroll to top button-->
+  <div class='scrolltop'>
+    <div class='scroll icon'><i class="fa fa-4x fa-angle-up"></i></div>
+</div>
 </html>

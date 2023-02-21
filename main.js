@@ -29,3 +29,12 @@ window.onscroll = function () {
   }
   prevScrollpos = currentScrollPos;
 };
+//* this function is for the scroll to top button (when you scroll down a scroll to top button appears when you click it gets you back to the top)
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 50 ) {
+      $('.scrolltop:hidden').stop(true, true).fadeIn();
+  } else {
+      $('.scrolltop').stop(true, true).fadeOut();
+  }
+});
+$(function(){$(".scroll").click(function(){$("html,body").animate({scrollTop:$(".home").offset().top},"1000");return false})})

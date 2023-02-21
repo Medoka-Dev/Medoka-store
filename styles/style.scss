@@ -24,16 +24,21 @@ $fh4: 2vmin;
 }
 //*btns styles
 .btn-r {
-  border: transparent;
-  border-radius: 5px;
+  width: 100px;
+  margin-right: 10px;
+  border: 2px solid transparent;
+  border-radius: 30px;
   color: $white;
   background-color: $gold;
-  padding: 10px 15px;
-  transition: 0.3s;
+  padding: 12px;
+  transition: 0.5s;
+  cursor: pointer;
   &:hover {
-    background-color: lighten($gold, 5%);
+    background-color: transparent;
+    border: 2px solid $gold;
   }
 }
+
 //*end of btns
 .the_horse_bug {
   position: absolute;
@@ -154,19 +159,23 @@ nav {
   }
   .title-section {
     text-align: center;
+    
   }
 }
 .title-section {
   max-width: 900px;
-  h1 {
+  img {
     margin: 0 20px;
-    font-size: $fh1;
-    color: $gold;
+    width: 703px ;
+    height: 118.5px ;
+    opacity: 90%;
   }
   p {
     margin: 0 10px;
     font-size: $fh2;
     color: $white;
+    text-align: center;
+    margin-top: 50px;
   }
 }
 //*start of stars
@@ -287,4 +296,49 @@ nav {
     black 100%
   );
   background-size: cover;
+}
+//*Scroll to top button
+.scrolltop {
+	display:none;
+	width:100%;
+	margin:0 auto;
+	position:fixed;
+	bottom:20px;
+	right:10px;	
+}
+.scroll {
+	position:absolute;
+	right:20px;
+	bottom:20px;
+  border-radius: 50%;
+	background: #ad841b;
+	background: $gold;
+	padding:20px;
+	text-align: center;
+	margin: 0 0 0 0;
+	cursor:pointer;
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s; 		
+}
+.scroll:hover {
+	background: #ad841b;
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s; 		
+}
+.scroll:hover .fa {
+	padding-top:-10px;
+}
+.scroll .fa {
+	font-size:30px;
+	margin-top:-5px;
+	margin-left:1px;
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s; 	
+  
 }
