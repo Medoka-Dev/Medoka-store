@@ -13,7 +13,7 @@ function close_sidebar() {
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
-  if (currentScrollPos < 500) {
+  if (currentScrollPos < 400) {
     document.getElementById("navbar").style.top = "0";
     document.getElementById("menu-icon").style.top = "35px";
     return;
