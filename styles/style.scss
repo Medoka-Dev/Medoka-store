@@ -40,9 +40,12 @@ $fh4: 2vmin;
 }
 
 //*end of btns
+body {
+  overflow-x: hidden;
+}
 .the_horse_bug {
-  position: absolute;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 header {
   width: 100vw;
@@ -81,8 +84,10 @@ nav {
   a {
     flex-basis: 150px;
   }
+  .spacer {
+    flex-grow: 50;
+  }
   ul {
-    flex-grow: 5;
     white-space: nowrap;
     li {
       display: inline-block;
@@ -101,19 +106,18 @@ nav {
     }
   }
   .account-info {
-    flex-basis: 200px;
+    flex-basis: 250px;
     white-space: nowrap;
     display: block;
-    padding-top: 10px;
+    padding-top: 5px;
+    padding-left: 10px;
     button {
-      margin: 0px 5px;
+      margin: 5px 5px;
     }
   }
   #menu-icon {
-    transition: 0.2s;
-    position: fixed;
-    top: 35px;
-    right: 20px;
+    padding-right: 10px;
+    padding-top: 30px;
     cursor: pointer;
     display: none;
   }
@@ -140,12 +144,12 @@ nav {
     width: $img-size;
   }
 }
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 850px) {
   nav {
     .navlist {
       display: none;
     }
-    div.account-info {
+    #user-info {
       display: none !important;
     }
   }
@@ -153,21 +157,11 @@ nav {
     display: initial !important;
   }
 }
-@media only screen and (max-width: 900px) {
-  .img-holder {
-    display: none;
-  }
-  .title-section {
-    text-align: center;
-    
-  }
-}
 .title-section {
-  max-width: 900px;
   img {
     margin: 0 20px;
-    width: 703px ;
-    height: 118.5px ;
+    width: 90vmin;
+    height: 15.2vmin;
     opacity: 90%;
   }
   p {
@@ -300,7 +294,6 @@ nav {
   background-size: cover;
 }
 
-
 //*Services section
 .services {
   width: 100vw;
@@ -313,49 +306,47 @@ nav {
   background-size: cover;
 }
 
-
 //*Scroll to top button
 .scrolltop {
-	display:none;
-	width:100%;
-	margin:0 auto;
-	position:fixed;
-	bottom:20px;
-	right:10px;	
+  display: none;
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
 }
 .scroll {
-	position:absolute;
-	right:20px;
-	bottom:20px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
   border-radius: 50%;
-	background: #ad841b;
-	background: $gold;
-	padding:20px;
-	text-align: center;
-	margin: 0 0 0 0;
-	cursor:pointer;
-	transition: 0.5s;
-	-moz-transition: 0.5s;
-	-webkit-transition: 0.5s;
-	-o-transition: 0.5s; 		
+  background: #ad841b;
+  background: $gold;
+  padding: 20px;
+  text-align: center;
+  margin: 0 0 0 0;
+  cursor: pointer;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 .scroll:hover {
-	background: #ad841b;
-	transition: 0.5s;
-	-moz-transition: 0.5s;
-	-webkit-transition: 0.5s;
-	-o-transition: 0.5s; 		
+  background: #ad841b;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 .scroll:hover .fa {
-	padding-top:-10px;
+  padding-top: -10px;
 }
 .scroll .fa {
-	font-size:30px;
-	margin-top:-5px;
-	margin-left:1px;
-	transition: 0.5s;
-	-moz-transition: 0.5s;
-	-webkit-transition: 0.5s;
-	-o-transition: 0.5s; 	
-  
+  font-size: 30px;
+  margin-top: -5px;
+  margin-left: 1px;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
 }
