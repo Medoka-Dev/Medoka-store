@@ -294,6 +294,33 @@ nav {
   background-size: cover;
 }
 
+.row{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-col1{
+  flex-basis: 35%;
+  img{
+    width: 50px;
+    height: 100px;
+    border-radius:15px; 
+  }
+}
+
+.about-col2{
+  flex-basis: 60%;
+  h1{
+    color: $gold;
+  }
+}
+.sub-title{
+  font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
 //*Services section
 .services {
   width: 100vw;
