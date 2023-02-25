@@ -283,15 +283,16 @@ nav {
 //*end of stars
 
 //*about section
-.home {
+.about {
   width: 100vw;
-  height: 100vh;
+  height: 80%;
   background-image: radial-gradient(
     farthest-corner at 97vw 95vh,
     #212121 0%,
     black 100%
   );
   background-size: cover;
+  padding: 100px 100px;
 }
 
 .row{
@@ -300,25 +301,40 @@ nav {
   flex-wrap: wrap;
 }
 
-.about-col1{
+.col1{
   flex-basis: 35%;
-  img{
-    width: 50px;
-    height: 100px;
-    border-radius:15px; 
-  }
+  padding: 0 30px;
+  
+}
+.about-img{
+  width: 417.5px;
+  height: 393px;
+  border-radius:15px; 
 }
 
-.about-col2{
+.col2{
   flex-basis: 60%;
-  h1{
-    color: $gold;
+  padding: 20px;
+  p{
+    color: $white;
+    list-style: none;
+    margin: 10px 0;
+    font-size: 24px;
+    display: block;
+    margin-top: 50px;
   }
 }
-.sub-title{
+.col2 h1{
   font-size: 50px;
   font-weight: 600;
   margin-bottom: 10px;
+  color: $white;
+  span{
+    font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 10px;
+      color: $gold;
+  }
 }
 
 //*Services section
@@ -331,11 +347,21 @@ nav {
     black 100%
   );
   background-size: cover;
+  padding: 80px 50px;
 }
-.title{
+.title h1{
   font-size: 50px;
   font-weight: 600;
   margin-bottom: 10px;
+  text-align: center;
+  margin-bottom: 80px;
+  span{
+    color: $gold;
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
+  }
 }
 //*The services cards
 #cards {
@@ -344,6 +370,7 @@ nav {
   gap: 8px;  
   max-width: 916px;
   width: calc(100% - 20px);
+  
 }
 
 #cards:hover > .card::after {
@@ -354,12 +381,12 @@ nav {
   background-color: transparent;
   border-radius: 10px;
   border: 2px solid #212121;
-  cursor: pointer;
   display: flex;
   height: 320px;
   flex-direction: column;
   position: relative;
   width: 350px;  
+  cursor: pointer;
 }
 
 .card:hover::before {
@@ -458,13 +485,16 @@ i {
 .card-info-title > h3 {
   font-size: 1.1em;
   line-height: 20px;
+  text-align: center;
 }
 
 .card-info-title > h4 {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.85em;
   margin-top: 8px;
+  text-align: center;
 }
+
 
 /* -- ↓ ↓ ↓ some responsiveness ↓ ↓ ↓ -- */
 
