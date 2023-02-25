@@ -194,280 +194,280 @@ nav #menu-icon {
   }
 }
 .star:nth-child(1) {
-  --star-tail-length: 5.44em;
-  --top-offset: 5.26vh;
-  --fall-duration: 11.134s;
-  --fall-delay: 8.711s;
+  --star-tail-length: 7.24em;
+  --top-offset: 4.66vh;
+  --fall-duration: 6.364s;
+  --fall-delay: 1.945s;
 }
 .star:nth-child(2) {
-  --star-tail-length: 5.52em;
-  --top-offset: 41.08vh;
-  --fall-duration: 10.735s;
-  --fall-delay: 0.38s;
+  --star-tail-length: 5.17em;
+  --top-offset: 64.97vh;
+  --fall-duration: 8.899s;
+  --fall-delay: 5.955s;
 }
 .star:nth-child(3) {
-  --star-tail-length: 5.01em;
-  --top-offset: 49.58vh;
-  --fall-duration: 6.874s;
-  --fall-delay: 7.166s;
+  --star-tail-length: 5.11em;
+  --top-offset: 87.36vh;
+  --fall-duration: 9.073s;
+  --fall-delay: 0.144s;
 }
 .star:nth-child(4) {
-  --star-tail-length: 6.31em;
-  --top-offset: 88.64vh;
-  --fall-duration: 10.106s;
-  --fall-delay: 9.345s;
+  --star-tail-length: 7.26em;
+  --top-offset: 77.89vh;
+  --fall-duration: 11.509s;
+  --fall-delay: 6.769s;
 }
 .star:nth-child(5) {
-  --star-tail-length: 5.53em;
-  --top-offset: 31.46vh;
-  --fall-duration: 9.704s;
-  --fall-delay: 2.177s;
+  --star-tail-length: 5.79em;
+  --top-offset: 92.55vh;
+  --fall-duration: 8.857s;
+  --fall-delay: 3.378s;
 }
 .star:nth-child(6) {
-  --star-tail-length: 6.12em;
-  --top-offset: 20.57vh;
-  --fall-duration: 10.039s;
-  --fall-delay: 0.555s;
-}
-.star:nth-child(7) {
-  --star-tail-length: 7.44em;
-  --top-offset: 56.5vh;
-  --fall-duration: 10.832s;
-  --fall-delay: 7.413s;
-}
-.star:nth-child(8) {
-  --star-tail-length: 6.14em;
-  --top-offset: 54.45vh;
-  --fall-duration: 6.607s;
-  --fall-delay: 7.526s;
-}
-.star:nth-child(9) {
-  --star-tail-length: 5.05em;
-  --top-offset: 3.76vh;
-  --fall-duration: 10.124s;
-  --fall-delay: 3.292s;
-}
-.star:nth-child(10) {
-  --star-tail-length: 5em;
-  --top-offset: 16.05vh;
-  --fall-duration: 10.913s;
-  --fall-delay: 4.79s;
-}
-.star:nth-child(11) {
-  --star-tail-length: 5.65em;
-  --top-offset: 48.8vh;
-  --fall-duration: 9.195s;
-  --fall-delay: 1.16s;
-}
-.star:nth-child(12) {
-  --star-tail-length: 6.12em;
-  --top-offset: 55.86vh;
-  --fall-duration: 7.405s;
-  --fall-delay: 8.214s;
-}
-.star:nth-child(13) {
-  --star-tail-length: 7.32em;
-  --top-offset: 95.03vh;
-  --fall-duration: 6.641s;
-  --fall-delay: 5.216s;
-}
-.star:nth-child(14) {
-  --star-tail-length: 5.92em;
-  --top-offset: 71.19vh;
-  --fall-duration: 10.325s;
-  --fall-delay: 1.921s;
-}
-.star:nth-child(15) {
-  --star-tail-length: 5.51em;
-  --top-offset: 33.69vh;
-  --fall-duration: 11.537s;
-  --fall-delay: 8.833s;
-}
-.star:nth-child(16) {
-  --star-tail-length: 6.76em;
-  --top-offset: 86.34vh;
-  --fall-duration: 11.159s;
-  --fall-delay: 4.424s;
-}
-.star:nth-child(17) {
-  --star-tail-length: 7.04em;
-  --top-offset: 31.8vh;
-  --fall-duration: 7.057s;
-  --fall-delay: 3.815s;
-}
-.star:nth-child(18) {
-  --star-tail-length: 6.5em;
-  --top-offset: 18.09vh;
-  --fall-duration: 8.921s;
-  --fall-delay: 7.865s;
-}
-.star:nth-child(19) {
-  --star-tail-length: 5.02em;
-  --top-offset: 71.23vh;
-  --fall-duration: 11.49s;
-  --fall-delay: 5.53s;
-}
-.star:nth-child(20) {
-  --star-tail-length: 7.17em;
-  --top-offset: 74.11vh;
-  --fall-duration: 9.576s;
-  --fall-delay: 1.496s;
-}
-.star:nth-child(21) {
-  --star-tail-length: 6.06em;
-  --top-offset: 76.21vh;
-  --fall-duration: 8.363s;
-  --fall-delay: 6.383s;
-}
-.star:nth-child(22) {
-  --star-tail-length: 7.36em;
-  --top-offset: 61.28vh;
-  --fall-duration: 9.771s;
-  --fall-delay: 9.191s;
-}
-.star:nth-child(23) {
-  --star-tail-length: 5.15em;
-  --top-offset: 50.79vh;
-  --fall-duration: 9.071s;
+  --star-tail-length: 7.35em;
+  --top-offset: 62.81vh;
+  --fall-duration: 7.645s;
   --fall-delay: 7.092s;
 }
+.star:nth-child(7) {
+  --star-tail-length: 5.18em;
+  --top-offset: 75.65vh;
+  --fall-duration: 8.899s;
+  --fall-delay: 6.028s;
+}
+.star:nth-child(8) {
+  --star-tail-length: 5.56em;
+  --top-offset: 52.73vh;
+  --fall-duration: 9.668s;
+  --fall-delay: 5.502s;
+}
+.star:nth-child(9) {
+  --star-tail-length: 5.92em;
+  --top-offset: 74.9vh;
+  --fall-duration: 8.884s;
+  --fall-delay: 0.155s;
+}
+.star:nth-child(10) {
+  --star-tail-length: 7.37em;
+  --top-offset: 83.37vh;
+  --fall-duration: 7.107s;
+  --fall-delay: 2.746s;
+}
+.star:nth-child(11) {
+  --star-tail-length: 5.91em;
+  --top-offset: 58.45vh;
+  --fall-duration: 10.911s;
+  --fall-delay: 4.396s;
+}
+.star:nth-child(12) {
+  --star-tail-length: 6.05em;
+  --top-offset: 18.48vh;
+  --fall-duration: 10.229s;
+  --fall-delay: 3.73s;
+}
+.star:nth-child(13) {
+  --star-tail-length: 5.31em;
+  --top-offset: 36.37vh;
+  --fall-duration: 9.308s;
+  --fall-delay: 7.726s;
+}
+.star:nth-child(14) {
+  --star-tail-length: 6.86em;
+  --top-offset: 47.4vh;
+  --fall-duration: 6.447s;
+  --fall-delay: 5.986s;
+}
+.star:nth-child(15) {
+  --star-tail-length: 6.34em;
+  --top-offset: 58.46vh;
+  --fall-duration: 11.88s;
+  --fall-delay: 4.895s;
+}
+.star:nth-child(16) {
+  --star-tail-length: 6.82em;
+  --top-offset: 31.13vh;
+  --fall-duration: 10.128s;
+  --fall-delay: 1.105s;
+}
+.star:nth-child(17) {
+  --star-tail-length: 6.7em;
+  --top-offset: 51.43vh;
+  --fall-duration: 6.888s;
+  --fall-delay: 0.188s;
+}
+.star:nth-child(18) {
+  --star-tail-length: 6.94em;
+  --top-offset: 2.68vh;
+  --fall-duration: 9.872s;
+  --fall-delay: 9.046s;
+}
+.star:nth-child(19) {
+  --star-tail-length: 7.26em;
+  --top-offset: 40.24vh;
+  --fall-duration: 6.771s;
+  --fall-delay: 6.316s;
+}
+.star:nth-child(20) {
+  --star-tail-length: 7.45em;
+  --top-offset: 99.76vh;
+  --fall-duration: 10.703s;
+  --fall-delay: 9.919s;
+}
+.star:nth-child(21) {
+  --star-tail-length: 6.43em;
+  --top-offset: 80.74vh;
+  --fall-duration: 6.662s;
+  --fall-delay: 7.645s;
+}
+.star:nth-child(22) {
+  --star-tail-length: 5.31em;
+  --top-offset: 69.65vh;
+  --fall-duration: 6.875s;
+  --fall-delay: 3.805s;
+}
+.star:nth-child(23) {
+  --star-tail-length: 6.49em;
+  --top-offset: 12.95vh;
+  --fall-duration: 11.167s;
+  --fall-delay: 9.202s;
+}
 .star:nth-child(24) {
-  --star-tail-length: 5.68em;
-  --top-offset: 11.32vh;
-  --fall-duration: 9.478s;
-  --fall-delay: 3.668s;
+  --star-tail-length: 6.91em;
+  --top-offset: 23.02vh;
+  --fall-duration: 11.48s;
+  --fall-delay: 8.856s;
 }
 .star:nth-child(25) {
-  --star-tail-length: 5.87em;
-  --top-offset: 52.09vh;
-  --fall-duration: 10.376s;
-  --fall-delay: 2.429s;
+  --star-tail-length: 6.28em;
+  --top-offset: 19.08vh;
+  --fall-duration: 9.574s;
+  --fall-delay: 2.418s;
 }
 .star:nth-child(26) {
-  --star-tail-length: 6.94em;
-  --top-offset: 52.6vh;
-  --fall-duration: 6.901s;
-  --fall-delay: 6.155s;
+  --star-tail-length: 6.46em;
+  --top-offset: 29.24vh;
+  --fall-duration: 10.203s;
+  --fall-delay: 7.586s;
 }
 .star:nth-child(27) {
-  --star-tail-length: 6.3em;
-  --top-offset: 81.86vh;
-  --fall-duration: 7.584s;
-  --fall-delay: 7.172s;
+  --star-tail-length: 6.77em;
+  --top-offset: 18.6vh;
+  --fall-duration: 6.774s;
+  --fall-delay: 4.394s;
 }
 .star:nth-child(28) {
-  --star-tail-length: 5.31em;
-  --top-offset: 97.07vh;
-  --fall-duration: 10.743s;
-  --fall-delay: 6.126s;
+  --star-tail-length: 5.69em;
+  --top-offset: 29.53vh;
+  --fall-duration: 6.828s;
+  --fall-delay: 9.857s;
 }
 .star:nth-child(29) {
-  --star-tail-length: 6.14em;
-  --top-offset: 7.78vh;
-  --fall-duration: 11.386s;
-  --fall-delay: 1.218s;
+  --star-tail-length: 5.06em;
+  --top-offset: 33.86vh;
+  --fall-duration: 9.81s;
+  --fall-delay: 3.861s;
 }
 .star:nth-child(30) {
-  --star-tail-length: 6.92em;
-  --top-offset: 78.46vh;
-  --fall-duration: 7.401s;
-  --fall-delay: 1.567s;
+  --star-tail-length: 5.12em;
+  --top-offset: 48.2vh;
+  --fall-duration: 8.707s;
+  --fall-delay: 5.544s;
 }
 .star:nth-child(31) {
-  --star-tail-length: 5.24em;
-  --top-offset: 13.24vh;
-  --fall-duration: 9.796s;
-  --fall-delay: 8.723s;
+  --star-tail-length: 5.63em;
+  --top-offset: 32.82vh;
+  --fall-duration: 11.175s;
+  --fall-delay: 9.493s;
 }
 .star:nth-child(32) {
-  --star-tail-length: 7.07em;
-  --top-offset: 76.12vh;
-  --fall-duration: 6.856s;
-  --fall-delay: 0.466s;
+  --star-tail-length: 6.72em;
+  --top-offset: 64.79vh;
+  --fall-duration: 7.264s;
+  --fall-delay: 3.738s;
 }
 .star:nth-child(33) {
-  --star-tail-length: 6.81em;
-  --top-offset: 96.68vh;
-  --fall-duration: 8.183s;
-  --fall-delay: 6.096s;
+  --star-tail-length: 6.07em;
+  --top-offset: 69.29vh;
+  --fall-duration: 9.664s;
+  --fall-delay: 3.225s;
 }
 .star:nth-child(34) {
-  --star-tail-length: 6.53em;
-  --top-offset: 21.42vh;
-  --fall-duration: 8.965s;
-  --fall-delay: 6.632s;
+  --star-tail-length: 6.73em;
+  --top-offset: 52.36vh;
+  --fall-duration: 8.892s;
+  --fall-delay: 5.4s;
 }
 .star:nth-child(35) {
-  --star-tail-length: 7.16em;
-  --top-offset: 10.74vh;
-  --fall-duration: 6.682s;
-  --fall-delay: 7.093s;
+  --star-tail-length: 6.88em;
+  --top-offset: 27.22vh;
+  --fall-duration: 9.764s;
+  --fall-delay: 3.138s;
 }
 .star:nth-child(36) {
-  --star-tail-length: 7.41em;
-  --top-offset: 81.66vh;
-  --fall-duration: 9.065s;
-  --fall-delay: 7.074s;
+  --star-tail-length: 5.59em;
+  --top-offset: 48.52vh;
+  --fall-duration: 7.744s;
+  --fall-delay: 5.831s;
 }
 .star:nth-child(37) {
-  --star-tail-length: 5.74em;
-  --top-offset: 61.56vh;
-  --fall-duration: 11.373s;
-  --fall-delay: 8.153s;
+  --star-tail-length: 5.36em;
+  --top-offset: 92.89vh;
+  --fall-duration: 10.777s;
+  --fall-delay: 5.801s;
 }
 .star:nth-child(38) {
-  --star-tail-length: 6.42em;
-  --top-offset: 39.88vh;
-  --fall-duration: 10.526s;
-  --fall-delay: 7.038s;
+  --star-tail-length: 5.13em;
+  --top-offset: 94.42vh;
+  --fall-duration: 7.287s;
+  --fall-delay: 6.707s;
 }
 .star:nth-child(39) {
-  --star-tail-length: 5.64em;
-  --top-offset: 83.28vh;
-  --fall-duration: 6.545s;
-  --fall-delay: 2.493s;
+  --star-tail-length: 6.2em;
+  --top-offset: 85.21vh;
+  --fall-duration: 10.143s;
+  --fall-delay: 2.907s;
 }
 .star:nth-child(40) {
-  --star-tail-length: 7.11em;
-  --top-offset: 71.98vh;
-  --fall-duration: 11.685s;
-  --fall-delay: 3.571s;
+  --star-tail-length: 6.46em;
+  --top-offset: 88.54vh;
+  --fall-duration: 11.382s;
+  --fall-delay: 8.553s;
 }
 .star:nth-child(41) {
-  --star-tail-length: 7.06em;
-  --top-offset: 68.55vh;
-  --fall-duration: 11.864s;
-  --fall-delay: 8.778s;
+  --star-tail-length: 6.61em;
+  --top-offset: 99.88vh;
+  --fall-duration: 10.684s;
+  --fall-delay: 1.652s;
 }
 .star:nth-child(42) {
-  --star-tail-length: 5.16em;
-  --top-offset: 55.4vh;
-  --fall-duration: 11.772s;
-  --fall-delay: 6.686s;
+  --star-tail-length: 6.33em;
+  --top-offset: 38.05vh;
+  --fall-duration: 11.224s;
+  --fall-delay: 9.569s;
 }
 .star:nth-child(43) {
-  --star-tail-length: 6.96em;
-  --top-offset: 68.88vh;
-  --fall-duration: 7.143s;
-  --fall-delay: 1.353s;
+  --star-tail-length: 6.4em;
+  --top-offset: 29.91vh;
+  --fall-duration: 11.82s;
+  --fall-delay: 1.277s;
 }
 .star:nth-child(44) {
-  --star-tail-length: 6.45em;
-  --top-offset: 68.48vh;
-  --fall-duration: 11.384s;
-  --fall-delay: 1.875s;
+  --star-tail-length: 5.92em;
+  --top-offset: 48.51vh;
+  --fall-duration: 10.201s;
+  --fall-delay: 0.742s;
 }
 .star:nth-child(45) {
-  --star-tail-length: 7.43em;
-  --top-offset: 61.68vh;
-  --fall-duration: 10.455s;
-  --fall-delay: 4.292s;
+  --star-tail-length: 7.22em;
+  --top-offset: 40.15vh;
+  --fall-duration: 10.865s;
+  --fall-delay: 6.544s;
 }
 .star:nth-child(46) {
-  --star-tail-length: 6.81em;
-  --top-offset: 80.22vh;
-  --fall-duration: 9.716s;
-  --fall-delay: 2.077s;
+  --star-tail-length: 6.52em;
+  --top-offset: 56.23vh;
+  --fall-duration: 10.165s;
+  --fall-delay: 7.574s;
 }
 .star::before, .star::after {
   position: absolute;
@@ -573,7 +573,6 @@ nav #menu-icon {
 .title h1 {
   font-size: 50px;
   font-weight: 600;
-  margin-bottom: 10px;
   text-align: center;
   margin-bottom: 80px;
 }
@@ -593,7 +592,7 @@ nav #menu-icon {
   width: calc(100% - 20px);
 }
 
-#cards:hover > .card::after {
+#cards:hover > .card1::after {
   opacity: 10%;
 }
 
@@ -607,14 +606,15 @@ nav #menu-icon {
   position: relative;
   width: 350px;
   cursor: pointer;
+  margin-left: 60%;
 }
 
-.card:hover::before {
+.card1:hover::before {
   opacity: 1;
 }
 
-.card::before,
-.card::after {
+.card1::before,
+.card1::after {
   border-radius: inherit;
   content: "";
   height: 100%;
@@ -626,18 +626,18 @@ nav #menu-icon {
   width: 100%;
 }
 
-.card::before {
+.card1::before {
   background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.06), transparent 40%);
   z-index: 3;
 }
 
-.card::after {
+.card1::after {
   background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.4), transparent 40%);
   z-index: 1;
 }
 
-.card > .card-content {
-  background-color: var(--card-color);
+.card1 > .card1-content {
+  background-color: var(--card1-color);
   border-radius: inherit;
   display: flex;
   flex-direction: column;
@@ -648,7 +648,7 @@ nav #menu-icon {
   z-index: 2;
 }
 
-/* -- ↓ ↓ ↓ extra card content styles ↓ ↓ ↓ -- */
+/* -- ↓ ↓ ↓ extra card1 content styles ↓ ↓ ↓ -- */
 h1, h2, h3, h4, span {
   color: rgb(240, 240, 240);
   font-family: "Rubik", sans-serif;
@@ -660,7 +660,7 @@ i {
   color: rgb(240, 240, 240);
 }
 
-.card-image {
+.card1-image {
   align-items: center;
   display: flex;
   height: 140px;
@@ -668,12 +668,12 @@ i {
   overflow: hidden;
 }
 
-.card-image > i {
+.card1-image > i {
   font-size: 6em;
   opacity: 0.5;
 }
 
-.card-info-wrapper {
+.card1-info-wrapper {
   align-items: center;
   display: flex;
   flex-grow: 1;
@@ -681,29 +681,144 @@ i {
   padding: 0px 20px;
 }
 
-.card-info {
+.card1-info {
   align-items: flex-start;
   display: flex;
   gap: 10px;
 }
 
-.card-info > i {
+.card1-info > i {
   font-size: 1em;
   height: 20px;
   line-height: 20px;
 }
 
-.card-info-title > h3 {
+.card1-info-title > h3 {
   font-size: 1.1em;
   line-height: 20px;
   text-align: center;
 }
 
-.card-info-title > h4 {
+.card1-info-title > h4 {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.85em;
   margin-top: 8px;
   text-align: center;
+}
+
+.contact {
+  width: 100vw;
+  height: auto;
+  background-color: #000;
+  background-size: cover;
+  padding: 40px 50px;
+}
+
+.contact h1 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.contact h1 span {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #8b6a13;
+}
+
+.question {
+  margin-bottom: 40px;
+}
+
+#question {
+  background-color: #212121;
+  border: transparent;
+  height: 50px;
+  padding: 20px;
+  color: #fff;
+  margin-left: 450px;
+  width: 30%;
+}
+
+.q {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #8b6a13;
+  transition: all 0.8s;
+  font-size: 14px;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid #8b6a13;
+  cursor: pointer;
+  margin-left: 30px;
+}
+
+.q:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  outline: 2px solid #fff;
+  box-shadow: 4px 5px 17px -4px #8b6a13;
+}
+
+.q::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #8b6a13;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+.q:hover::before {
+  width: 250%;
+}
+
+.socialinfo {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+.phone, .mail {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.phone, .mail {
+  height: 25px;
+  width: 25px;
+}
+
+.insta, .facebook {
+  height: 35px;
+  width: 35px;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+.social a {
+  transition: transform 0.4s;
+}
+
+.social a:hover {
+  transform: translateY(-7px);
+  color: #8b6a13;
 }
 
 /* -- ↓ ↓ ↓ some responsiveness ↓ ↓ ↓ -- */
@@ -716,37 +831,37 @@ i {
     max-width: 1000px;
     padding: 10px 0px;
   }
-  .card {
+  .card1 {
     flex-shrink: 1;
     width: calc(50% - 4px);
   }
 }
 @media (max-width: 500px) {
-  .card {
+  .card1 {
     height: 180px;
   }
-  .card-image {
+  .card1-image {
     height: 80px;
   }
-  .card-image > i {
+  .card1-image > i {
     font-size: 3em;
   }
-  .card-info-wrapper {
+  .card1-info-wrapper {
     padding: 0px 10px;
   }
-  .card-info > i {
+  .card1-info > i {
     font-size: 0.8em;
   }
-  .card-info-title > h3 {
+  .card1-info-title > h3 {
     font-size: 0.9em;
   }
-  .card-info-title > h4 {
+  .card1-info-title > h4 {
     font-size: 0.8em;
     margin-top: 4px;
   }
 }
 @media (max-width: 320px) {
-  .card {
+  .card1 {
     width: 100%;
   }
 }

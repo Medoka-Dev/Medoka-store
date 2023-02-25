@@ -352,7 +352,6 @@ nav {
 .title h1{
   font-size: 50px;
   font-weight: 600;
-  margin-bottom: 10px;
   text-align: center;
   margin-bottom: 80px;
   span{
@@ -373,7 +372,7 @@ nav {
   
 }
 
-#cards:hover > .card::after {
+#cards:hover > .card1::after {
   opacity: 10%;
 }
 
@@ -387,14 +386,15 @@ nav {
   position: relative;
   width: 350px;  
   cursor: pointer;
+  margin-left: 60%;
 }
 
-.card:hover::before {
+.card1:hover::before {
   opacity: 1;
 }
 
-.card::before,
-.card::after {
+.card1::before,
+.card1::after {
   border-radius: inherit;
   content: "";
   height: 100%;
@@ -406,7 +406,7 @@ nav {
   width: 100%;
 }
 
-.card::before {
+.card1::before {
   background: radial-gradient(
     800px circle at var(--mouse-x) var(--mouse-y), 
     rgba(255, 255, 255, 0.06),
@@ -415,7 +415,7 @@ nav {
   z-index: 3;
 }
 
-.card::after {  
+.card1::after {  
   background: radial-gradient(
     600px circle at var(--mouse-x) var(--mouse-y), 
     rgba(255, 255, 255, 0.4),
@@ -424,8 +424,8 @@ nav {
   z-index: 1;
 }
 
-.card > .card-content {
-  background-color: var(--card-color);
+.card1 > .card1-content {
+  background-color: var(--card1-color);
   border-radius: inherit;
   display: flex;
   flex-direction: column;
@@ -436,7 +436,7 @@ nav {
   z-index: 2;
 }
 
-/* -- ↓ ↓ ↓ extra card content styles ↓ ↓ ↓ -- */
+/* -- ↓ ↓ ↓ extra card1 content styles ↓ ↓ ↓ -- */
 
 h1, h2, h3, h4, span {
   color: rgb(240, 240, 240);
@@ -449,7 +449,7 @@ i {
   color: rgb(240, 240, 240);
 }
 
-.card-image {
+.card1-image {
   align-items: center;
   display: flex;
   height: 140px;
@@ -457,12 +457,12 @@ i {
   overflow: hidden;
 }
 
-.card-image > i {
+.card1-image > i {
   font-size: 6em;
   opacity: 0.5;
 }
 
-.card-info-wrapper {
+.card1-info-wrapper {
   align-items: center;
   display: flex;
   flex-grow: 1;
@@ -470,30 +470,146 @@ i {
   padding: 0px 20px;
 }
 
-.card-info {
+.card1-info {
   align-items: flex-start;
   display: flex;
   gap: 10px;
 }
 
-.card-info > i {  
+.card1-info > i {  
   font-size: 1em;
   height: 20px;
   line-height: 20px;
 }
 
-.card-info-title > h3 {
+.card1-info-title > h3 {
   font-size: 1.1em;
   line-height: 20px;
   text-align: center;
 }
 
-.card-info-title > h4 {
+.card1-info-title > h4 {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.85em;
   margin-top: 8px;
   text-align: center;
 }
+
+//* Contact section
+//* Question part
+.contact{
+  width: 100vw;
+  height: auto;
+  background-color: $black;
+  background-size: cover;
+  padding: 40px 50px;
+}
+.contact{
+  h1{
+    font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-bottom: 50px;
+  span{
+    font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-bottom: 50px;
+  color: $gold;
+  }
+  }
+}
+.question{
+margin-bottom: 40px;  
+}
+
+#question{
+  background-color: #212121;
+  border: transparent;
+  height: 50px;
+  padding: 20px;
+  color: $white;
+  margin-left: 450px;
+  width: 30%;
+}
+
+
+//*button
+.q{
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: $gold;
+  transition: all 0.8s;
+  font-size: 14px;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid $gold;
+  cursor: pointer;
+  margin-left: 30px;
+}
+
+.q:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  outline: 2px solid $white;
+  box-shadow: 4px 5px 17px -4px $gold;
+}
+
+.q::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: $gold;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+.q:hover::before {
+  width: 250%;
+}
+
+//* social icons
+.socialinfo{
+  padding: 20px;
+  display: flex;
+  justify-content: center; 
+  color: $white;
+}
+.phone, .mail{
+  margin-right: 30px;
+  margin-left: 30px;
+}
+.phone, .mail {
+  height: 25px;
+  width: 25px;
+}
+.insta, .facebook{
+  height: 35px;
+  width: 35px;
+}
+.social{
+  display: flex;
+  justify-content: center;
+}
+.social a{
+  transition: transform 0.4s;
+}
+.social a:hover{
+  transform: translateY(-7px);
+ color: $gold;
+}
+
+
 
 
 /* -- ↓ ↓ ↓ some responsiveness ↓ ↓ ↓ -- */
@@ -509,45 +625,45 @@ i {
     padding: 10px 0px;
   }
   
-  .card {
+  .card1 {
     flex-shrink: 1;
     width: calc(50% - 4px);
   }
 }
 
 @media(max-width: 500px) {
-  .card {
+  .card1 {
     height: 180px;
   }
   
-  .card-image {
+  .card1-image {
     height: 80px;  
   }
   
-  .card-image > i {
+  .card1-image > i {
     font-size: 3em;
   }
     
-  .card-info-wrapper {
+  .card1-info-wrapper {
     padding: 0px 10px;
   }
   
-  .card-info > i { 
+  .card1-info > i { 
     font-size: 0.8em; 
   }
   
-  .card-info-title > h3 {
+  .card1-info-title > h3 {
     font-size: 0.9em;
   }
 
-  .card-info-title > h4 {
+  .card1-info-title > h4 {
     font-size: 0.8em;
     margin-top: 4px;
   }
 }
 
 @media(max-width: 320px) {
-  .card {
+  .card1 {
     width: 100%;
   }
 }
