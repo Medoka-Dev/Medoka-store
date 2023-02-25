@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <!--bootstrap for scroll to top button-->
+    <link
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <title>Via World</title>
+  </head>
+  <body onresize="close_sidebar()">
+    <nav id="navbar" onresize="close_sidebar()">
+      <a href="#home"><img src="styles/img/logo.png" class="logo" /></a>
+      <ul class="navlist" id="navlist">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="spacer"></div>
+      <div class="account-info" id="user-info">
+        <button href="#" class="sign btn-r">Login</button>
+        <button href="#" class="login btn-r">Sign up</button>
+      </div>
+      <i class="fa fa-bars fa-2xl" id="menu-icon" onclick="open_sidebar()"></i>
+      <div class="sidebar" id="sidebar">
+        <div id="sidebar-user-info" class="account-info"></div>
+        <ul id="sidebar-list">
+          <!-- *the nav list gets copied here automatically -->
+        </ul>
+      </div>
+    </nav>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <!-- fontawsome CDN -->
+    <script
+      src="https://kit.fontawesome.com/4f4b2ce8e5.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- personal CDN -->
+    <script src="main.js"></script>
+    <!--Scroll to top button-->
+    <div class="scrolltop">
+    <div class="scroll icon"><i class="fa fa-4x fa-angle-up"></i></div>
+    </div>
+  </body>
+</html>
