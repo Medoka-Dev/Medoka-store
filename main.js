@@ -1,16 +1,22 @@
+var sideBar = document.getElementById("sidebar");
 //* copy the content of the navbar in the sidebar
 $( document ).ready(function() {
   document.getElementById("sidebar-list").innerHTML = document.getElementById("navlist").innerHTML;
   document.getElementById("sidebar-user-info").innerHTML = document.getElementById("user-info").innerHTML;
 });
+//* closes the sidebar on click
+$('#sidebar').find('*').on("click",function(){
+  sideBar.style.width = "0px";
+});
+$('#sidebar').on("click",function(){
+  sideBar.style.width = "0px";
+});
 //* this function open the side bar
 function open_sidebar() {
-  var sideBar = document.getElementById("sidebar");
   if (sideBar.style.width == "60vw") sideBar.style.width = "0px";
   else sideBar.style.width = "60vw";
 }
 function close_sidebar() {
-  var sideBar = document.getElementById("sidebar");
   if (screen.width > 750) sideBar.style.width = "0px";
 }
 //* this make the nav bar dissappear on scroll down and reappear on scroll up
