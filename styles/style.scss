@@ -26,37 +26,40 @@ $fh4: 2vmin;
 body {
   overflow-x: hidden;
 }
+
 .the_horse_bug {
-  padding:0;
+  padding: 0;
   position: absolute;
   overflow-x: hidden;
   overflow-y: scroll;
 }
+
 header {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-image: radial-gradient(
-    farthest-corner at 3vw 5vh,
-    #212121 0%,
-    black 100%
-  );
+  background-image: radial-gradient(farthest-corner at 3vw 5vh,
+      #212121 0%,
+      black 100%);
   background-size: cover;
   overflow: hidden;
 }
+
 .logo {
   float: left;
   margin: 16px 36px;
   width: 80.5px;
   height: 35px;
 }
+
 #navbar {
   top: 0;
   transition: 0.2s;
   background-color: $black;
 }
+
 nav {
   height: 70px;
   z-index: 50;
@@ -66,23 +69,29 @@ nav {
   color: $white;
   margin: 0;
   width: 100vw;
+
   a {
     flex-basis: 150px;
   }
+
   .spacer {
     flex-grow: 50;
   }
+
   ul {
     white-space: nowrap;
+
     li {
       display: inline-block;
       padding: 20px;
+
       a {
         text-decoration: none;
         color: $white;
         font-size: 18px;
         text-transform: uppercase;
         letter-spacing: 2px;
+
         &:hover {
           color: $gold;
           transition: 0.7s;
@@ -90,41 +99,45 @@ nav {
       }
     }
   }
-  //*btns styles
-.btn-r {
-  padding: 1.2em 1.5em;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  font-weight: 500;
-  color: #000;
-  background-color: #fff;
-  border: none;
-  border-radius: 45px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease 0s;
-  cursor: pointer;
-  outline: none;
-}
-.btn-r:hover{
-  background-color: $gold;
-  box-shadow: 0px 15px 20px rgb(130, 113, 25);
-  color: #fff;
-  transform: translateY(-6px);
-}
-.btn-r:active
 
-//*end of btns
+  //*btns styles
+  .btn-r {
+    padding: 1.2em 1.5em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .btn-r:hover {
+    background-color: $gold;
+    box-shadow: 0px 15px 20px rgb(130, 113, 25);
+    color: #fff;
+    transform: translateY(-6px);
+  }
+
+  .btn-r:active //*end of btns
+
   .account-info {
     flex-basis: 250px;
     white-space: nowrap;
     display: block;
     padding-top: 5px;
     padding-left: 10px;
+
     .learn {
       margin: 5px 5px;
     }
   }
+
   #menu-icon {
     padding-right: 10px;
     padding-top: 30px;
@@ -132,6 +145,7 @@ nav {
     display: none;
   }
 }
+
 #sidebar {
   overflow: hidden;
   transition: 0.2s;
@@ -142,11 +156,13 @@ nav {
   left: 0;
   height: 100vh;
   width: 0px;
+
   ul {
     display: flex;
     flex-direction: column;
   }
 }
+
 .img-holder {
   img {
     $img-size: 40vmin;
@@ -154,19 +170,23 @@ nav {
     width: $img-size;
   }
 }
+
 @media only screen and (max-width: 850px) {
   nav {
     .navlist {
       display: none;
     }
+
     #user-info {
       display: none !important;
     }
   }
+
   #menu-icon {
     display: initial !important;
   }
 }
+
 .title-section {
   img {
     margin: 0 20px;
@@ -174,6 +194,7 @@ nav {
     height: 15.2vmin;
     opacity: 90%;
   }
+
   p {
     margin: 0 10px;
     font-size: $fh2;
@@ -182,17 +203,20 @@ nav {
     margin-top: 50px;
   }
 }
+
 //*start of stars
 @mixin sp-layout {
   @media screen and (max-width: 750px) {
     @content;
   }
 }
+
 @function random_range($min, $max) {
   $rand: random();
-  $random_range: $min + floor($rand * (($max - $min) + 1));
+  $random_range: $min +floor($rand * (($max - $min) + 1));
   @return $random_range;
 }
+
 .stars {
   position: absolute;
   top: 0;
@@ -267,6 +291,7 @@ nav {
 }
 
 @keyframes tail-fade {
+
   0%,
   50% {
     width: var(--star-tail-length);
@@ -290,42 +315,43 @@ nav {
     opacity: 0.6;
   }
 }
+
 //*end of stars
 
 //*about section
 .about {
   width: 100vw;
   height: 80%;
-  background-image: radial-gradient(
-    farthest-corner at 97vw 95vh,
-    #212121 0%,
-    black 100%
-  );
+  background-image: radial-gradient(farthest-corner at 97vw 95vh,
+      #212121 0%,
+      black 100%);
   background-size: cover;
   padding: 100px 100px;
 }
 
-.row{
+.row {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.col1{
+.col1 {
   flex-basis: 35%;
   padding: 0 30px;
-  
-}
-.about-img{
-  width: 417.5px;
-  height: 393px;
-  border-radius:15px; 
+
 }
 
-.col2{
+.about-img {
+  width: 417.5px;
+  height: 393px;
+  border-radius: 15px;
+}
+
+.col2 {
   flex-basis: 60%;
   padding: 20px;
-  p{
+
+  p {
     color: $white;
     list-style: none;
     margin: 10px 0;
@@ -334,16 +360,18 @@ nav {
     margin-top: 50px;
   }
 }
-.col2 h1{
+
+.col2 h1 {
   font-size: 50px;
   font-weight: 600;
   margin-bottom: 10px;
   color: $white;
-  span{
+
+  span {
     font-size: 50px;
-  font-weight: 600;
-  margin-bottom: 10px;
-      color: $gold;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: $gold;
   }
 }
 
@@ -351,20 +379,20 @@ nav {
 .services {
   width: 100vw;
   height: 100vh;
-  background-image: radial-gradient(
-    farthest-corner at 97vw 95vh,
-    #212121 0%,
-    black 100%
-  );
+  background-image: radial-gradient(farthest-corner at 97vw 95vh,
+      #212121 0%,
+      black 100%);
   background-size: cover;
   padding: 80px 50px;
 }
-.title h1{
+
+.title h1 {
   font-size: 50px;
   font-weight: 600;
   text-align: center;
   margin-bottom: 80px;
-  span{
+
+  span {
     color: $gold;
     font-size: 50px;
     font-weight: 600;
@@ -372,17 +400,18 @@ nav {
     text-align: center;
   }
 }
+
 //*The services cards
 #cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;  
+  gap: 8px;
   max-width: 916px;
   width: calc(100% - 20px);
-  
+
 }
 
-#cards:hover > .card1::after {
+#cards:hover>.card1::after {
   opacity: 10%;
 }
 
@@ -394,7 +423,7 @@ nav {
   height: 320px;
   flex-direction: column;
   position: relative;
-  width: 350px;  
+  width: 350px;
   cursor: pointer;
   margin-left: 60%;
 }
@@ -417,24 +446,20 @@ nav {
 }
 
 .card1::before {
-  background: radial-gradient(
-    800px circle at var(--mouse-x) var(--mouse-y), 
-    rgba(255, 255, 255, 0.06),
-    transparent 40%
-  );
+  background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
+      rgba(255, 255, 255, 0.06),
+      transparent 40%);
   z-index: 3;
 }
 
-.card1::after {  
-  background: radial-gradient(
-    600px circle at var(--mouse-x) var(--mouse-y), 
-    rgba(255, 255, 255, 0.4),
-    transparent 40%
-  );
+.card1::after {
+  background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
+      rgba(255, 255, 255, 0.4),
+      transparent 40%);
   z-index: 1;
 }
 
-.card1 > .card1-content {
+.card1>.card1-content {
   background-color: var(--card1-color);
   border-radius: inherit;
   display: flex;
@@ -448,14 +473,18 @@ nav {
 
 /* -- ↓ ↓ ↓ extra card1 content styles ↓ ↓ ↓ -- */
 
-h1, h2, h3, h4, span {
+h1,
+h2,
+h3,
+h4,
+span {
   color: rgb(240, 240, 240);
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   margin: 0px;
 }
 
-i {  
+i {
   color: rgb(240, 240, 240);
 }
 
@@ -467,7 +496,7 @@ i {
   overflow: hidden;
 }
 
-.card1-image > i {
+.card1-image>i {
   font-size: 6em;
   opacity: 0.5;
 }
@@ -486,28 +515,30 @@ i {
   gap: 10px;
 }
 
-.card1-info > i {  
+.card1-info>i {
   font-size: 1em;
   height: 20px;
   line-height: 20px;
 }
 
-.card1-info-title > h3 {
+.card1-info-title>h3 {
   font-size: 1.1em;
   line-height: 20px;
   text-align: center;
 }
 
-.card1-info-title > h4 {
+.card1-info-title>h4 {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.85em;
   margin-top: 8px;
   text-align: center;
 }
+
 //*buttons
-.learn-btn{
+.learn-btn {
   margin-left: 500px;
 }
+
 .learn {
   display: inline-block;
   border-radius: 4px;
@@ -521,77 +552,80 @@ i {
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
- }
- 
- .learn span {
+}
+
+.learn span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
   font-size: 13px;
- }
- 
- .learn span:after {
+}
+
+.learn span:after {
   content: '»';
   position: absolute;
   opacity: 0;
   top: 0;
   right: -15px;
   transition: 0.5s;
- }
- 
- .learn:hover span {
+}
+
+.learn:hover span {
   padding-right: 14px;
- }
- 
- .learn:hover span:after {
+}
+
+.learn:hover span:after {
   opacity: 1;
   right: 0;
- }
+}
 
 //* Contact section
 //* Question part
-.contact{
+.contact {
   width: 100vw;
   height: auto;
   background-color: $black;
   background-size: cover;
   padding: 40px 50px;
 }
-.contact{
-  h1{
+
+.contact {
+  h1 {
     font-size: 50px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  text-align: center;
-  margin-bottom: 50px;
-  span{
-    font-size: 50px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  text-align: center;
-  margin-bottom: 50px;
-  color: $gold;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-bottom: 50px;
+
+    span {
+      font-size: 50px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      text-align: center;
+      margin-bottom: 50px;
+      color: $gold;
+    }
   }
-  }
-}
-.question{
-margin-bottom: 40px;  
 }
 
-#question{
+.question {
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+#question {
   background-color: #212121;
   border: transparent;
   height: 50px;
   padding: 20px;
   color: $white;
-  margin-left: 450px;
   width: 30%;
 }
 
 
 //*button
-.q{
+.q {
   padding: 1em 2em;
   border: none;
   border-radius: 5px;
@@ -633,36 +667,53 @@ margin-bottom: 40px;
 }
 
 //* social icons
-.socialinfo{
+.socialinfo {
   padding: 20px;
   display: flex;
-  justify-content:center; 
+  justify-content: center;
   color: $white;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+}
+
+.socialinfo p {
+  justify-content: space-between;
 }
 
 
-.facebook, .insta, .discord{
+.facebook,
+.insta,
+.discord {
   margin-right: 15px;
   font-size: 20px;
 }
 
-.social{
+.social {
   display: flex;
   justify-content: center;
 }
-.social a{
+
+.social a {
   transition: transform 0.4s;
-  
-}
-.social a:hover{
-  color: $gold;
-  transform: translateY(-7px); 
-}
-.scoial a::after{
-  color: $gold;
 }
 
+.fa-brands::before {
+  padding: 8px;
+}
+
+.social a:hover {
+  color: $gold;
+  transform: translateY(-7px);
+}
+
+.fa-brands {
+  transition: 0.5s;
+  transition: transform 0.5s;
+}
+
+.fa-brands:hover {
+  color: $gold;
+  transform: translateY(-6px);
+}
 
 
 
@@ -670,15 +721,15 @@ margin-bottom: 40px;
 
 @media(max-width: 1000px) {
   body {
-    align-items: flex-start;  
+    align-items: flex-start;
     overflow: auto;
   }
-  
-  #cards {    
+
+  #cards {
     max-width: 1000px;
     padding: 10px 0px;
   }
-  
+
   .card1 {
     flex-shrink: 1;
     width: calc(50% - 4px);
@@ -689,28 +740,28 @@ margin-bottom: 40px;
   .card1 {
     height: 180px;
   }
-  
+
   .card1-image {
-    height: 80px;  
+    height: 80px;
   }
-  
-  .card1-image > i {
+
+  .card1-image>i {
     font-size: 3em;
   }
-    
+
   .card1-info-wrapper {
     padding: 0px 10px;
   }
-  
-  .card1-info > i { 
-    font-size: 0.8em; 
+
+  .card1-info>i {
+    font-size: 0.8em;
   }
-  
-  .card1-info-title > h3 {
+
+  .card1-info-title>h3 {
     font-size: 0.9em;
   }
 
-  .card1-info-title > h4 {
+  .card1-info-title>h4 {
     font-size: 0.8em;
     margin-top: 4px;
   }
@@ -728,7 +779,7 @@ margin-bottom: 40px;
   bottom: 10px;
 }
 
-#youtube-link > i {
+#youtube-link>i {
   color: rgb(239, 83, 80);
 }
 
@@ -736,7 +787,7 @@ margin-bottom: 40px;
   bottom: 60px;
 }
 
-#source-link > i {
+#source-link>i {
   color: rgb(94, 106, 210);
 }
 
@@ -747,7 +798,7 @@ margin-bottom: 40px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 6px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-  cursor: pointer;  
+  cursor: pointer;
   display: inline-flex;
   gap: 5px;
   left: 10px;
@@ -762,12 +813,13 @@ margin-bottom: 40px;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.link > i, .link > span {
+.link>i,
+.link>span {
   height: 20px;
   line-height: 20px;
 }
 
-.link > span {
+.link>span {
   color: white;
 }
 
@@ -780,6 +832,7 @@ margin-bottom: 40px;
   bottom: 20px;
   right: 10px;
 }
+
 .scroll {
   position: absolute;
   right: 20px;
@@ -796,6 +849,7 @@ margin-bottom: 40px;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
 }
+
 .scroll:hover {
   background: #ad841b;
   transition: 0.5s;
@@ -803,9 +857,11 @@ margin-bottom: 40px;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
 }
+
 .scroll:hover .fa {
   padding-top: -10px;
 }
+
 .scroll .fa {
   font-size: 30px;
   margin-top: -5px;
