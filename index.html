@@ -33,7 +33,9 @@
           onclick="open_sidebar()"
         ></i>
         <div class="sidebar" id="sidebar">
-          <div id="sidebar-user-info" class="account-info"></div>
+          <div id="sidebar-user-info" class="account-info">
+            <!-- *account info gets copied here automatically -->
+          </div>
           <ul id="sidebar-list">
             <!-- *the nav list gets copied here automatically -->
           </ul>
@@ -94,15 +96,14 @@
       </header>
       <!--About us section-->
       <div id="about" class="about">
-        <div class="row">
-          <div class="col1">
-            <img class="about-img" src="styles/img/test.png">
-          </div>
-          <div class="col2">
-            <h1 class="sub-title">About <span>Us</span> </h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos officia, corporis eum maxime odio nulla!</p>
-          </div>
-        </div>    
+        <img class="about-img" src="styles/img/test.png" />
+        <div class="about-text">
+          <h3 class="sub-title">About <span>Us</span></h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+            officia, corporis eum maxime odio nulla!
+          </p>
+        </div>
       </div>
       <!--Services section-->
       <div id="services" class="services">
@@ -111,28 +112,27 @@
         </div>
         <div id="cards">
           <div class="card">
-          <a href="#"><div class="card1">
-            <div class="card1-content">
-              <div class="card1-image">
-                <i class="event"><img src="styles/img/party.jpg"></i>
-              </div>
-              <div class="card1-info-wrapper">
-                <div class="card1-info">
-                  <div class="card1-info-title">
-                    <h3>Via Events</h3>  
-                    <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                  </div>    
+            <a href="#"
+              ><div class="card1">
+                <div class="card1-content">
+                  <div class="card1-image">
+                    <i class="event"><img src="styles/img/party.jpg" /></i>
+                  </div>
+                  <div class="card1-info-wrapper">
+                    <div class="card1-info">
+                      <div class="card1-info-title">
+                        <h3>Via Events</h3>
+                        <h4>Lorem ipsum dolor sit amet consectetur.</h4>
+                        <h4>click here to visit Via events</h4>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </div></a
+            >
           </div>
-        </a>
-        </div class="learn-btn">
-        <a href="#"><button class="learn"><span>Learn More</span></button></a>
+        </div>
       </div>
-      </div>
-      
-
       <!-- jQuery CDN -->
       <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
       <!-- fontawsome CDN -->
@@ -148,23 +148,31 @@
       </div>
       <footer>
         <!--Contact section-->
-      <div class="contact" id="contact">
-        <h1>Contact <span>Us</span></h1>
-        <div class="question">
-          <input type="text" name="question" id="question" required placeholder="Ask us a question">
-          <button class="q" type="submit"> Send</button>
-        </div>
-        <div class="socialinfo">
+        <div class="contact" id="contact">
+          <h1>Contact <span>Us</span></h1>
+          <div class="question">
+            <input
+              type="text"
+              name="question"
+              id="question"
+              required
+              placeholder="Ask us a question"
+            />
+            <button class="q" type="submit">Send</button>
+          </div>
+          <div class="socialinfo">
             <p><i class="fa-solid fa-phone"></i> +216 ** *** ***</p>
             <p><i class="fa-solid fa-envelope"></i> ****.*****@gmail.com</p>
+          </div>
+          <div class="social">
+            <a href="#" class="facebook"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a href="#" class="insta"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="discord"><i class="fa-brands fa-discord"></i></a>
+            <a href="#" class="tiktok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
         </div>
-        <div class="social">
-          <a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" class="insta"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" class="discord"><i class="fa-brands fa-discord"></i></a>
-          <a href="#" class="tiktok"><i class="fa-brands fa-tiktok"></i></a>
-        </div>
-      </div>
       </footer>
     </div>
   </body>
