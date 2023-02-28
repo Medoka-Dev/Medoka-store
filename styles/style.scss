@@ -22,24 +22,7 @@ $fh4: 2vmin;
   scroll-behavior: smooth;
   font-size: 20px;
 }
-//*btns styles
-.btn-r {
-  width: 100px;
-  margin-right: 10px;
-  border: 2px solid transparent;
-  border-radius: 30px;
-  color: $white;
-  background-color: $gold;
-  padding: 12px;
-  transition: 0.5s;
-  cursor: pointer;
-  &:hover {
-    background-color: transparent;
-    border: 2px solid $gold;
-  }
-}
 
-//*end of btns
 body {
   overflow-x: hidden;
 }
@@ -105,13 +88,38 @@ nav {
       }
     }
   }
+  //*btns styles
+.btn-r {
+  padding: 1.2em 1.5em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+.btn-r:hover{
+  background-color: $gold;
+  box-shadow: 0px 15px 20px rgb(130, 113, 25);
+  color: #fff;
+  transform: translateY(-6px);
+}
+.btn-r:active
+
+//*end of btns
   .account-info {
     flex-basis: 250px;
     white-space: nowrap;
     display: block;
     padding-top: 5px;
     padding-left: 10px;
-    button {
+    .learn {
       margin: 5px 5px;
     }
   }
@@ -494,6 +502,50 @@ i {
   margin-top: 8px;
   text-align: center;
 }
+//*buttons
+.learn-btn{
+  margin-left: 500px;
+}
+.learn {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: $gold;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 12px;
+  width: 105px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+ }
+ 
+ .learn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  font-size: 13px;
+ }
+ 
+ .learn span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+ }
+ 
+ .learn:hover span {
+  padding-right: 14px;
+ }
+ 
+ .learn:hover span:after {
+  opacity: 1;
+  right: 0;
+ }
 
 //* Contact section
 //* Question part
@@ -582,31 +634,31 @@ margin-bottom: 40px;
 .socialinfo{
   padding: 20px;
   display: flex;
-  justify-content: center; 
+  justify-content:center; 
   color: $white;
+  margin-bottom: 10px;
 }
-.phone, .mail{
-  margin-right: 30px;
-  margin-left: 30px;
+
+
+.facebook, .insta, .discord{
+  margin-right: 15px;
+  font-size: 20px;
 }
-.phone, .mail {
-  height: 25px;
-  width: 25px;
-}
-.insta, .facebook{
-  height: 35px;
-  width: 35px;
-}
+
 .social{
   display: flex;
   justify-content: center;
 }
 .social a{
   transition: transform 0.4s;
+  
 }
 .social a:hover{
-  transform: translateY(-7px);
- color: $gold;
+  color: $gold;
+  transform: translateY(-7px); 
+}
+.scoial a::after{
+  color: $gold;
 }
 
 
@@ -717,7 +769,7 @@ margin-bottom: 40px;
   color: white;
 }
 
-//*Scroll to top button
+//*Scroll to top .learn
 .scrolltop {
   display: none;
   width: 100%;
