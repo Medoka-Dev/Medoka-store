@@ -657,8 +657,8 @@ i {
   margin-bottom: 5px;
 }
 
-.socialinfo p {
-  justify-content: space-between;
+.socialinfo p:first-child {
+  margin-right: 30px;
 }
 
 .facebook,
@@ -753,6 +753,7 @@ i {
   position: fixed;
   bottom: 20px;
   right: 10px;
+  
 }
 
 .scroll {
@@ -762,7 +763,7 @@ i {
   border-radius: 50%;
   background: #ad841b;
   background: $gold;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   margin: 0 0 0 0;
   cursor: pointer;
@@ -770,10 +771,12 @@ i {
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
+  
 }
 
+
 .scroll:hover {
-  background: #ad841b;
+  background: #b98c1c;
   transition: 0.5s;
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
@@ -786,10 +789,11 @@ i {
 
 .scroll .fa {
   font-size: 30px;
-  margin-top: -5px;
-  margin-left: 1px;
+  margin-top: 0px;
+  margin-left: 0px;
   transition: 0.5s;
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
+  color: $black;
 }
