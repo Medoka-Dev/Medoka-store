@@ -406,7 +406,7 @@ nav {
     max-width: 70vw;
   }
   .spacer{
-    flex-basis: 20%;
+    flex-basis: 15%;
   }
   .about-text{
     margin-left: 50px;
@@ -493,10 +493,10 @@ nav {
 .card {
   background-color: transparent;
   border-radius: 10px;
-  border: 2px solid #212121;
+  border: 3px solid #303030;
   display: flex;
-  height: 350px;
-  width: 300px;
+  width: 325px;
+  height: 375px;
   min-width: 300px;
   min-height: 350px;
   flex-direction: column;
@@ -577,7 +577,7 @@ i {
 
 .card1-image > i {
   font-size: 6em;
-  opacity: 0.5;
+  opacity: 0.9;
 }
 
 .card1-info-wrapper {
@@ -619,7 +619,7 @@ i {
   height: auto;
   background-color: $black;
   background-size: cover;
-  padding: 40px 50px;
+  padding: 30px 50px;
 }
 
 .contact {
@@ -628,7 +628,7 @@ i {
     font-weight: 600;
     margin-bottom: 10px;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
     span {
       font-size: 50px;
@@ -643,7 +643,7 @@ i {
 
 .question {
   margin-bottom: 30px;
-  justify-content: center;
+  text-align: center;
 }
 
 #question {
@@ -662,16 +662,12 @@ i {
   color: $white;
   margin-bottom: 5px;
 }
+.fa-solid{
+  padding: 10px;
+}
 
 .socialinfo p:first-child {
   margin-right: 30px;
-}
-
-.facebook,
-.insta,
-.discord {
-  margin-right: 15px;
-  font-size: 20px;
 }
 
 .social {
@@ -679,27 +675,17 @@ i {
   justify-content: center;
 }
 
-.social a {
-  transition: transform 0.4s;
-}
-
 .fa-brands::before {
-  padding: 8px;
-}
-
-.social a:hover {
-  color: $gold;
-  transform: translateY(-7px);
+  padding: 10px;
 }
 
 .fa-brands {
-  transition: 0.5s;
-  transition: transform 0.5s;
+  transition: transform 0.4s;
 }
 
 .fa-brands:hover {
   color: $gold;
-  transform: translateY(-6px);
+  transform: translateY(-7px);
 }
 /* -- ↓ ↓ ↓ YouTube link styles ↓ ↓ ↓ -- */
 
