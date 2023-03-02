@@ -275,7 +275,7 @@ nav {
 
 //*start of stars
 @mixin sp-layout {
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 850px) {
     @content;
   }
 }
@@ -789,3 +789,4 @@ i {
   -o-transition: 0.5s;
   color: $black;
 }
+
