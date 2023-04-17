@@ -1,7 +1,10 @@
 //* variables
 $white: #fff;
-$gold: #8b6a13;
 $black: #000;
+$darkp:#2A2F4F;
+$midp:#917FB3;
+$lightp:#E5BEEC;
+$pink:#FDE2F3;
 $fh1: 13vmin;
 $fh2: 5vmin;
 $fh3: 3.5vmin;
@@ -30,7 +33,7 @@ $fh4: 2vmin;
   letter-spacing: 2.5px;
   font-weight: bolder;
   color: $black;
-  background-color: $gold;
+  background-color: $midp;
   border: none;
   border-radius: 45px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -38,9 +41,9 @@ $fh4: 2vmin;
   cursor: pointer;
   outline: none;
   &:hover {
-    background-color: $gold;
-    box-shadow: 0px 15px 20px rgb(130, 113, 25);
-    color: #fff;
+    background-color: $lightp;
+    box-shadow: 0px 15px 20px $lightp;
+    color: $black;
     transform: translateY(-3px);
   }
 }
@@ -48,7 +51,7 @@ $fh4: 2vmin;
 .learn {
   display: inline-block;
   border-radius: 4px;
-  background-color: $gold;
+  background-color: $midp;
   border: none;
   color: #ffffff;
   text-align: center;
@@ -94,12 +97,12 @@ $fh4: 2vmin;
   font-weight: bold;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: $gold;
+  color: $midp;
   transition: all 0.8s;
   font-size: 14px;
   position: relative;
   overflow: hidden;
-  outline: 2px solid $gold;
+  outline: 2px solid $midp;
   cursor: pointer;
   margin-left: 30px;
 
@@ -107,7 +110,7 @@ $fh4: 2vmin;
     color: #ffffff;
     transform: scale(1.1);
     outline: 2px solid $white;
-    box-shadow: 4px 5px 17px -4px $gold;
+    box-shadow: 4px 5px 17px -4px $midp;
   }
 
   &::before {
@@ -117,7 +120,7 @@ $fh4: 2vmin;
     top: 0;
     width: 0;
     height: 100%;
-    background-color: $gold;
+    background-color: $midp;
     transform: skewX(45deg);
     z-index: -1;
     transition: width 1000ms;
@@ -199,7 +202,7 @@ nav {
         letter-spacing: 2px;
 
         &:hover {
-          color: $gold;
+          color: $midp;
           transition: 0.5s;
         }
       }
@@ -297,7 +300,7 @@ nav {
 
 .star {
   $star-count: 46;
-  --star-color: #8b6a13;
+  --star-color: #FDE2F3;
   --star-tail-length: 6em;
   --star-tail-height: 2px;
   --star-width: calc(var(--star-tail-length) / 6);
@@ -426,7 +429,7 @@ nav {
         font-size: 50px;
         font-weight: 600;
         margin-bottom: 10px;
-        color: $gold;
+        color: $midp;
       }
     }
   }
@@ -468,7 +471,7 @@ nav {
   margin-bottom: 80px;
 
   span {
-    color: $gold;
+    color: $midp;
     font-size: 50px;
     font-weight: 600;
     margin-bottom: 10px;
@@ -481,7 +484,6 @@ nav {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  width: calc(100% - 20px);
   justify-items: center;
   justify-content: space-around;
 }
@@ -636,13 +638,12 @@ i {
       margin-bottom: 10px;
       text-align: center;
       margin-bottom: 50px;
-      color: $gold;
+      color: $midp;
     }
   }
 }
 
 .question {
-  margin-bottom: 30px;
   text-align: center;
 }
 
@@ -656,11 +657,10 @@ i {
 }
 //* social icons
 .socialinfo {
-  padding: 20px;
+  padding: 40px;
   display: flex;
   justify-content: center;
   color: $white;
-  margin-bottom: 5px;
 }
 .fa-solid{
   padding: 10px;
@@ -677,6 +677,7 @@ i {
 
 .fa-brands::before {
   padding: 10px;
+
 }
 
 .fa-brands {
@@ -684,7 +685,7 @@ i {
 }
 
 .fa-brands:hover {
-  color: $gold;
+  color: $midp;
   transform: translateY(-7px);
 }
 /* -- ↓ ↓ ↓ YouTube link styles ↓ ↓ ↓ -- */
@@ -754,7 +755,7 @@ i {
   bottom: 20px;
   border-radius: 50%;
   background: #ad841b;
-  background: $gold;
+  background: $midp;
   padding: 15px;
   text-align: center;
   margin: 0 0 0 0;
@@ -768,7 +769,7 @@ i {
 
 
 .scroll:hover {
-  background: #b98c1c;
+  background: $lightp;
   transition: 0.5s;
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
