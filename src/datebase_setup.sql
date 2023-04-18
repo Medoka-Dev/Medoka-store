@@ -5,7 +5,7 @@ CREATE SEQUENCE user_id_seq
     MAXVALUE 99999999
     CYCLE;
 create table users (
-    user_id int(8) primary key Default user_id_seq.NEXTVAL,
+    user_id int(8) primary key Default (NEXT VALUE FOR user_id_seq),
     username varchar(50) unique not null,
     password varchar(255) not null,
     email varchar(255) not null unique
