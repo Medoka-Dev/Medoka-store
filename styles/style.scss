@@ -1,10 +1,9 @@
 //* variables
 $white: #fff;
 $black: #000;
-$darkp:#2A2F4F;
-$midp:#917FB3;
-$lightp:#E5BEEC;
-$pink:#FDE2F3;
+$darkp: #2a2f4f;
+$midp: #917fb3;
+$lightp: #e5beec;
 $fh1: 13vmin;
 $fh2: 5vmin;
 $fh3: 3.5vmin;
@@ -14,7 +13,9 @@ $fh4: 2vmin;
   font-family: "default_font";
   src: url("fonts/BAHNSCHRIFT.TTF");
 }
-
+input{
+  color: $white !important;
+}
 * {
   margin: 0;
   padding: 0;
@@ -131,6 +132,174 @@ $fh4: 2vmin;
   }
 }
 //*end of btns
+//* modals
+
+.panel {
+  width: 30vw;
+  position: fixed;
+  display: none;
+  color: $white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  &__register-form,
+  &__password-form {
+    display: none;
+  }
+  &__register-form .form__submit {
+    margin-top: 5px !important;
+  }
+  &__form-wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+    background-color: $black;
+    overflow-y: auto;
+    @media screen and (min-width: 768px) {
+      padding: 10% 15%;
+      border-radius: 10px;
+      overflow-y: visible;
+    }
+  }
+
+  &__prev-btn {
+    width: 24px;
+    height: 24px;
+    background: none;
+    padding: 0;
+    svg {
+      transition: fill 0.3s;
+    }
+    &:hover > svg {
+      fill: $midp;
+    }
+  }
+
+  &__headers {
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  &__header {
+    font-size: 1.375rem;
+    &:first-child {
+      padding-bottom: 5px;
+    }
+    &.active > .panel__link {
+      color: $midp;
+      font-size: 3rem;
+    }
+  }
+
+  &__link {
+    color: inherit;
+    transition: all 0.3s;
+    font-weight: 600;
+  }
+}
+/**
+ * Styles for <form>
+ */
+.form {
+  &__row {
+    position: relative;
+    padding-top: 40px;
+    &.has-error > .form__error:after {
+      display: block;
+    }
+  }
+  &__input {
+    width: 100%;
+    padding: 5px 0;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    background: none;
+    &:focus,
+    &:active {
+      outline: 0;
+    }
+    &:focus ~ .form__label,
+    &:active ~ .form__label,
+    &:valid ~ .form__label {
+      bottom: 30px;
+      font-size: 0.75rem;
+    }
+    &:focus ~ .form__bar,
+    &:active ~ .form__bar {
+      left: 0;
+      right: 0;
+      width: 100%;
+    }
+  }
+  &__bar {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: $midp;
+    transition: all 0.3s;
+  }
+  &__label {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+  &__submit {
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 30px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    background-color: $midp;
+    cursor: pointer;
+  }
+  &__retrieve-pass {
+    display: block;
+    padding: 15px 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s;
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &__error {
+    position: absolute;
+    bottom: -20px;
+    display: block;
+    width: 100%;
+    height: 20px;
+    color: $midp;
+    font-size: 0.75rem;
+    line-height: 20px;
+    &:after {
+      content: "x";
+      position: absolute;
+      bottom: 20px;
+      right: -20px;
+      display: none;
+      width: 20px;
+      height: 25px;
+      font-size: 1.125rem;
+      line-height: 25px;
+      text-align: center;
+      color: $midp;
+    }
+  }
+  &__info {
+    text-align: center;
+  }
+}
+//* end of modals
 body {
   overflow-x: hidden;
 }
@@ -300,7 +469,7 @@ nav {
 
 .star {
   $star-count: 46;
-  --star-color: #FDE2F3;
+  --star-color: #fde2f3;
   --star-tail-length: 6em;
   --star-tail-height: 2px;
   --star-width: calc(var(--star-tail-length) / 6);
@@ -403,15 +572,15 @@ nav {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
-  img{
+  img {
     width: 417.5px;
     height: auto;
     max-width: 70vw;
   }
-  .spacer{
+  .spacer {
     flex-basis: 15%;
   }
-  .about-text{
+  .about-text {
     margin-left: 50px;
     p {
       color: $white;
@@ -435,13 +604,13 @@ nav {
   }
 }
 @media only screen and (max-width: 850px) {
-  .about{
-    flex-direction:column-reverse;
+  .about {
+    flex-direction: column-reverse;
     align-items: center;
-    .spacer{
+    .spacer {
       display: none;
     }
-    .about-text{
+    .about-text {
       display: block;
       text-align: center;
       margin-left: 0;
@@ -453,7 +622,7 @@ nav {
 //*Services section
 .services {
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   background-image: radial-gradient(
     farthest-corner at 97vw 95vh,
     #212121 0%,
@@ -570,11 +739,16 @@ i {
 }
 
 .card1-image {
+  margin-top: 20px;
   align-items: center;
   display: flex;
   height: 140px;
   justify-content: center;
   overflow: hidden;
+  img {
+    height: 200px;
+    width: 300px;
+  }
 }
 
 .card1-image > i {
@@ -662,7 +836,7 @@ i {
   justify-content: center;
   color: $white;
 }
-.fa-solid{
+.fa-solid {
   padding: 10px;
 }
 
@@ -677,7 +851,6 @@ i {
 
 .fa-brands::before {
   padding: 10px;
-
 }
 
 .fa-brands {
@@ -746,7 +919,6 @@ i {
   position: fixed;
   bottom: 20px;
   right: 10px;
-  
 }
 
 .scroll {
@@ -764,9 +936,7 @@ i {
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
-  
 }
-
 
 .scroll:hover {
   background: $lightp;
@@ -790,4 +960,3 @@ i {
   -o-transition: 0.5s;
   color: $black;
 }
-
