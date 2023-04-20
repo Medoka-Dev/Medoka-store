@@ -1,11 +1,10 @@
 <?php
 $servername = "localhost";
-$username = "username";
+$username = "root";
 $password = "";
 $DBname = "MedokaDB";
 
-$conn = new mysqli($servername, $username, $password,$DBname);
-
-if (!$conn){
-    die("Connetion failed: ".mysqli_connect_error());
+$conn = mysqli_connect($servername, $username, $password,$DBname);
+if ( mysqli_connect_errno() ) {
+	echo('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
