@@ -58,7 +58,12 @@ document.getElementById("cards").onmousemove = e => {
     card.style.setProperty("--mouse-y", `${y}px`);
   };
 }
+//-login form js
+
 document.getElementById("login").onclick = function() {
+  document.getElementById("registration_form").style.display = "initial";
+}
+document.getElementById("sign").onclick = function() {
   document.getElementById("registration_form").style.display = "initial";
 }
 $(function() {
@@ -81,10 +86,4 @@ $(function() {
     $('.panel__prev-btn').on('click', function(e) {
         $('.panel, .panel_blur').fadeOut(300);
     });
-});
-
-$.validate({
-	modules : 'security',
-	errorMessageClass: 'form__error',
-	validationErrorMsgAttribute: 'data-error'
 });

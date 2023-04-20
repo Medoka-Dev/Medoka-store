@@ -1,3 +1,7 @@
+<?php
+include_once 'src/DB_connect.php'
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,8 +27,8 @@
       </ul>
       <div class="spacer"></div>
       <div class="account-info" id="user-info">
-        <button href="#" class="sign btn-r" id="login">Login</button>
-        <button href="#" class="login btn-r">Sign up</button>
+        <button href="#" class=" btn-r" id="login">Login</button>
+        <button href="#" class=" btn-r" id="sign">Sign up</button>
       </div>
       <i class="fa fa-bars fa-2xl" id="menu-icon" onclick="open_sidebar()"></i>
       <div class="sidebar" id="sidebar">
@@ -138,8 +142,8 @@
           <button class="q" type="submit">Send</button>
         </div>
         <div class="socialinfo">
-          <p><i class="fa-solid fa-phone"></i> +216 ** *** ***</p>
-          <p><i class="fa-solid fa-envelope"></i> ****.*****@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i> +216 24 092 623</p>
+          <p><i class="fa-solid fa-envelope"></i> Medoka.games@gmail.com</p>
         </div>
         <div class="social">
           <a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -196,7 +200,13 @@
             </form>
 
             <!-- Register Form -->
-            <form class="form panel__register-form" id="register-form" method="post" action="/">
+            <form class="form panel__register-form" id="register-form" method="post" action="src/add_user.php">
+            <div class="form__row">
+                <input type="text" id="register-username" class="form__input" name="register-username" data-validation="length" data-validation-length="5-15" data-error="username must contain 5-15 characters" required>
+                <span class="form__bar"></span>
+                <label for="register-username" class="form__label">username</label>
+                <span class="form__error"></span>
+              </div>
               <div class="form__row">
                 <input type="text" id="register-email" class="form__input" name="register-mail" data-validation="email" data-error="Invalid email address." required>
                 <span class="form__bar"></span>
@@ -204,19 +214,13 @@
                 <span class="form__error"></span>
               </div>
               <div class="form__row">
-                <input type="password" id="register-password" class="form__input" name="register-pass" data-validation="length" data-validation-length="8-25" data-error="Password must contain 8-25 characters" required>
+                <input type="password" id="register-password" class="form__input" name="register-password" data-validation="length" data-validation-length="8-25" data-error="Password must contain 8-25 characters" required>
                 <span class="form__bar"></span>
                 <label for="register-password" class="form__label">Password</label>
                 <span class="form__error"></span>
               </div>
               <div class="form__row">
-                <input type="password" id="register-password-check" class="form__input" name="register-repeat-pass" data-validation="confirmation" data-validation-confirm="register-pass" data-error="Your passwords did not match." required>
-                <span class="form__bar"></span>
-                <label for="register-password-check" class="form__label">Check password</label>
-                <span class="form__error"></span>
-              </div>
-              <div class="form__row">
-                <input type="submit" class="form__submit" value="Register!">
+                <input type="submit" class="form__submit" value="Register!" name="submit">
               </div>
             </form>
 
