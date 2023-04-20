@@ -1,6 +1,5 @@
 <?php
-include_once 'src/DB_connect.php'
-
+include_once 'src/DB_connect.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -7,9 +7,11 @@ if (isset($_POST["submit"])) {
     $password = $_POST["register-password"];
     if (unameExists($conn, $username, $email) == false) {
         add_user($conn, $username, $email, $password);
+        header("location: ../index.php?err=done");
+        exit;
     } else {
-        header("./index.php?err=uexist");
+        header("location: ../index.php?err=uexist");
         exit;
     }
 }
-header("./index.php");
+header("location: ../index.php");
