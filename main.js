@@ -87,3 +87,4 @@ $(function() {
         $('.panel, .panel_blur').fadeOut(300);
     });
 });
+

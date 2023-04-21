@@ -9,8 +9,6 @@ include_once 'src/DB_connect.php';
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles/style.css" />
-  <!--bootstrap for scroll to top button-->
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
   <link rel="shortcut icon" href="styles/img/manette.png">
   <title>Medoka Games</title>
 </head>

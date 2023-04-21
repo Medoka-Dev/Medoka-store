@@ -1073,7 +1073,42 @@ display: none;
   margin-left: -60%;
 }
 //*end of manual navigation
+//*start of auto navigation
 
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 650px;
+  div{
+    border: 2px solid $midp;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+  }
+  div:not(:last-child){
+    margin-right: 40px;
+  }
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{ 
+  background-color: $midp;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{ 
+  background-color: $midp;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{ 
+  background-color: $midp;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{ 
+  background-color: $midp;
+}
+
+//*start of auto navigation
 
 //*game card
 
