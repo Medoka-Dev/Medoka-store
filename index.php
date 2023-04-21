@@ -11,7 +11,8 @@ include_once 'src/DB_connect.php';
   <link rel="stylesheet" href="styles/style.css" />
   <!--bootstrap for scroll to top button-->
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
-  <title>Via World</title>
+  <link rel="shortcut icon" href="styles/img/manette.png">
+  <title>Medoka Games</title>
 </head>
 
 <body onresize="close_sidebar()">

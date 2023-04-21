@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/style.css" />
-    <title>Via World</title>
+    <link rel="shortcut icon" href="styles/img/manette.png">
+    <title>Store</title>
   </head>
     <body>
       <nav id="navbar">
@@ -31,11 +32,54 @@
         </div>
       </nav>
       <div class="store">
+        <div class="trending">
+          <div class="slides">
+            <!--radio btns start-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <!--radio btns end-->
+            <!--slider imgs start-->
+            <div class="slide first">
+              <img src="styles/img/hogwarts.jpg">
+            </div>
+            <div class="slide">
+              <img src="styles/img/tlou.jpg">
+            </div>
+            <div class="slide">
+              <img src="styles/img/re4.jpg">
+            </div>
+            <div class="slide">
+              <img src="styles/img/the witcher.png">
+            </div>
+            <!--slider imgs end-->
+            <!--automatic navigation start-->
+            <div class="navigation-auto">
+              <div class="auto-btn1"></div>
+              <div class="auto-btn2"></div>
+              <div class="auto-btn3"></div>
+              <div class="auto-btn4"></div>
+            </div>
+            <!--automatic navigation end-->
+          </div>
+          <!--manual navigation start-->
+          <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+          </div>
+          <!--manual navigation end-->
+        </div>
+      </div>
+      <div class="store">
           <div class="cardc">
             <div class="card2">
               <img src="styles/img/tlos2.jpg">
-              <h6 class="game-title">The Last Of Us 2</h6>
+              <h6 class="game-title">the last of us 2</h6>
               <h6 class="price">40DT</h6>
+              <a href="#"><button class="buy">Buy</button></a>
           </div>
         </div>
         <div class="cardc">
@@ -44,7 +88,7 @@
             <h6 class="game-title">The Last Of Us 2</h6>
             <h6 class="price">40DT</h6>
         </div>
-      </div>
+      
       <div class="cardc">
         <div class="card2">
           <img src="styles/img/tlos2.jpg">
@@ -85,6 +129,7 @@
     <img src="styles/img/tlos2.jpg">
     <h6 class="game-title">The Last Of Us 2</h6>
     <h6 class="price">40DT</h6>
+</div>
 </div>
 </div>
       </div>
