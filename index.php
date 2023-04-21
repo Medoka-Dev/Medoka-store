@@ -21,7 +21,7 @@ include_once 'src/DB_connect.php';
       <ul class="navlist" id="navlist">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About Us</a></li>
-        <li><a href="#services">Services</a></li>
+        <li><a href="#store">Store</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="spacer"></div>
@@ -104,10 +104,10 @@ include_once 'src/DB_connect.php';
         </p>
       </div>
     </div>
-    <!--Services section-->
-    <div id="services" class="services">
+    <!--store section-->
+    <div id="store" class="store">
       <div class="title">
-        <h1><span>Our</span> Services</h1>
+        <h1><span>Our</span> Store</h1>
       </div>
       <div id="cards">
         <div class="card">
