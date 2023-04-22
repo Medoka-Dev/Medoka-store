@@ -27,13 +27,14 @@ session_start();
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="spacer"></div>
-      <div class="account-info" id="user-info">
+      <div class="account-info" href="src/loggerout.php id="user-info">
+        
         <?php
         if (isset($_SESSION["in"])) {
-          echo '<div>
+          echo '<a href="src/loggerout.php"><div>
               <p>'.$_SESSION["username"].'</p>
             </div>
-            <img src="styles/img/user.png" alt="user image" height="60">';
+            <img src="styles/img/user.png" alt="user image" height="60"></a>';
         } else {
           echo '<button href="#" class=" btn-r" id="login">Login</button><button href="#" class=" btn-r" id="sign">Sign up</button>';
         }
