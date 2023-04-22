@@ -1,3 +1,7 @@
+<?php
+include_once 'src/DB_connect.php';
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,34 +10,46 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles/style.css" />
-
+  <!--bootstrap for scroll to top button-->
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
   <link rel="shortcut icon" href="styles/img/manette.png">
-  <title>Store</title>
+  <title>Medoka Games</title>
 </head>
 
-<body>
-  <nav id="navbar">
-    <a><img src="styles/img/logo.png" class="logo" /></a>
-    <ul class="navlist">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#store">Store</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="account-info">
-      <button href="#" class="sign btn-r">
-        Login
-      </button>
-      <button href="#" class="login btn-r">Sign up</button>
-    </div>
-    <i class="fa fa-bars fa-2xl" id="menu-icon" onclick="open_sidebar()"></i>
-    <div class="sidebar" id="sidebar">
-      <ul>
+<body onresize="close_sidebar()">
+  <div class="the_horse_bug">
+    <nav id="navbar" onresize="close_sidebar()">
+      <a href="#home"><img src="styles/img/logo.png" class="logo" /></a>
+      <ul class="navlist" id="navlist">
         <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
         <li><a href="#store">Store</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-    </div>
-  </nav>
+      <div class="spacer"></div>
+      <div class="account-info" href="src/loggerout.php id="user-info">
+        
+        <?php
+        if (isset($_SESSION["in"])) {
+          echo '<a href="src/loggerout.php"><div>
+              <p>'.$_SESSION["username"].'</p>
+            </div>
+            <img src="styles/img/user.png" alt="user image" height="60"></a>';
+        } else {
+          echo '<button href="#" class=" btn-r" id="login">Login</button><button href="#" class=" btn-r" id="sign">Sign up</button>';
+        }
+        ?>
+      </div>
+      <i class="fa fa-bars fa-2xl" id="menu-icon" onclick="open_sidebar()"></i>
+      <div class="sidebar" id="sidebar">
+        <div id="sidebar-user-info" class="account-info">
+          <!-- *account info gets copied here automatically -->
+        </div>
+        <ul id="sidebar-list">
+          <!-- *the nav list gets copied here automatically -->
+        </ul>
+      </div>
+    </nav>
   <div class="store">
     <div class="trending">
       <div class="slides">
