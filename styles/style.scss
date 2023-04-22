@@ -27,15 +27,15 @@ input {
   font-family: "default_font", "sans-serif";
   box-sizing: border-box;
   scroll-behavior: smooth;
-  // font-size: 20px;
+  font-size: 20px;
 }
 
 //*btns styles
 .btn-r {
+  margin-left:10px;
+  margin-top:5px;
   padding: 1.2em 1.5em;
   font-size: 13px;
-  margin-top: 5px;
-  margin-left: 10px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
   font-weight: bolder;
@@ -56,47 +56,7 @@ input {
   }
 }
 
-//* learn button
-.learn {
-  display: inline-block;
-  border-radius: 4px;
-  background-color: $midp;
-  border: none;
-  color: #ffffff;
-  text-align: center;
-  font-size: 16px;
-  padding: 12px;
-  width: 105px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
 
-  span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-    font-size: 13px;
-  }
-
-  span:after {
-    content: "»";
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -15px;
-    transition: 0.5s;
-  }
-
-  &:hover span {
-    padding-right: 14px;
-  }
-
-  &:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
-}
 
 //* send button
 //*button
@@ -187,7 +147,7 @@ input {
       transition: fill 0.3s;
     }
 
-    &:hover > svg {
+    &:hover>svg {
       fill: $midp;
     }
   }
@@ -204,7 +164,7 @@ input {
       padding-bottom: 5px;
     }
 
-    &.active > .panel__link {
+    &.active>.panel__link {
       color: $midp;
       font-size: 3rem;
     }
@@ -225,7 +185,7 @@ input {
     position: relative;
     padding-top: 40px;
 
-    &.has-error > .form__error:after {
+    &.has-error>.form__error:after {
       display: block;
     }
   }
@@ -242,15 +202,15 @@ input {
       outline: 0;
     }
 
-    &:focus ~ .form__label,
-    &:active ~ .form__label,
-    &:valid ~ .form__label {
+    &:focus~.form__label,
+    &:active~.form__label,
+    &:valid~.form__label {
       bottom: 30px;
       font-size: 0.75rem;
     }
 
-    &:focus ~ .form__bar,
-    &:active ~ .form__bar {
+    &:focus~.form__bar,
+    &:active~.form__bar {
       left: 0;
       right: 0;
       width: 100%;
@@ -348,11 +308,9 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-image: radial-gradient(
-    farthest-corner at 3vw 5vh,
-    #212121 0%,
-    black 100%
-  );
+  background-image: radial-gradient(farthest-corner at 3vw 5vh,
+      #212121 0%,
+      black 100%);
   background-size: cover;
   overflow: hidden;
 }
@@ -390,7 +348,7 @@ nav {
 
   ul {
     white-space: nowrap;
-    margin-top: 5px;
+
     li {
       display: inline-block;
       padding: 20px;
@@ -409,9 +367,7 @@ nav {
       }
     }
   }
-  #sidebar-user-info {
-    margin-left: 10px;
-  }
+
   .account-info {
     flex-basis: 240px;
     padding-top: 5px;
@@ -431,7 +387,6 @@ nav {
     }
     .learn {
       margin: 5px 5px;
-      display: table-cell;
     }
   }
 
@@ -502,7 +457,7 @@ nav {
 
 @function random_range($min, $max) {
   $rand: random();
-  $random_range: $min + floor($rand * (($max - $min) + 1));
+  $random_range: $min +floor($rand * (($max - $min) + 1));
   @return $random_range;
 }
 
@@ -580,6 +535,7 @@ nav {
 }
 
 @keyframes tail-fade {
+
   0%,
   50% {
     width: var(--star-tail-length);
@@ -610,11 +566,9 @@ nav {
 .about {
   width: 100vw;
   height: 80%;
-  background-image: radial-gradient(
-    farthest-corner at 97vw 95vh,
-    #212121 0%,
-    black 100%
-  );
+  background-image: radial-gradient(farthest-corner at 97vw 95vh,
+      #212121 0%,
+      black 100%);
   background-size: cover;
   padding: 100px 50px;
   display: flex;
@@ -680,16 +634,12 @@ nav {
 .store {
   width: 100vw;
   height: 90vh;
-  background-image: radial-gradient(
-    farthest-corner at 97vw 95vh,
-    #212121 0%,
-    black 100%
-  );
+  background-image: radial-gradient(farthest-corner at 97vw 95vh,
+      #212121 0%,
+      black 100%);
   background-size: cover;
   padding: 80px 50px;
   justify-items: center;
-  display: flex;
-  flex-direction: column;
 }
 
 .title h1 {
@@ -716,7 +666,7 @@ nav {
   justify-content: space-around;
 }
 
-#cards:hover > .card1::after {
+#cards:hover>.card1::after {
   opacity: 10%;
 }
 
@@ -752,24 +702,20 @@ nav {
 }
 
 .card1::before {
-  background: radial-gradient(
-    800px circle at var(--mouse-x) var(--mouse-y),
-    rgba(255, 255, 255, 0.06),
-    transparent 40%
-  );
+  background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
+      rgba(255, 255, 255, 0.06),
+      transparent 40%);
   z-index: 3;
 }
 
 .card1::after {
-  background: radial-gradient(
-    600px circle at var(--mouse-x) var(--mouse-y),
-    rgba(255, 255, 255, 0.4),
-    transparent 40%
-  );
+  background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
+      rgba(255, 255, 255, 0.4),
+      transparent 40%);
   z-index: 1;
 }
 
-.card1 > .card1-content {
+.card1>.card1-content {
   background-color: var(--card1-color);
   border-radius: inherit;
   display: flex;
@@ -811,7 +757,7 @@ i {
   }
 }
 
-.card1-image > i {
+.card1-image>i {
   font-size: 6em;
   opacity: 0.9;
 }
@@ -819,9 +765,8 @@ i {
 .card1-info-wrapper {
   align-items: center;
   display: flex;
-  justify-content: space-around;
-  text-align: center;
   flex-grow: 1;
+  justify-content: flex-start;
   padding: 0px 20px;
 }
 
@@ -831,19 +776,19 @@ i {
   gap: 10px;
 }
 
-.card1-info > i {
+.card1-info>i {
   font-size: 1em;
   height: 20px;
   line-height: 20px;
 }
 
-.card1-info-title > h3 {
+.card1-info-title>h3 {
   font-size: 1.1em;
   line-height: 20px;
   text-align: center;
 }
 
-.card1-info-title > h4 {
+.card1-info-title>h4 {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.85em;
   margin-top: 8px;
@@ -932,7 +877,7 @@ i {
   bottom: 10px;
 }
 
-#youtube-link > i {
+#youtube-link>i {
   color: rgb(239, 83, 80);
 }
 
@@ -940,7 +885,7 @@ i {
   bottom: 60px;
 }
 
-#source-link > i {
+#source-link>i {
   color: rgb(94, 106, 210);
 }
 
@@ -966,13 +911,13 @@ i {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.link > i,
-.link > span {
+.link>i,
+.link>span {
   height: 20px;
   line-height: 20px;
 }
 
-.link > span {
+.link>span {
   color: white;
 }
 
@@ -1036,7 +981,7 @@ body{
   justify-items: center;
 }
 //*trending
-.store{ 
+.store{
   width: 100vw;
   background-size: cover;
   justify-items: center;
@@ -1119,13 +1064,8 @@ display: none;
   display: flex;
   width: 100%;
   justify-content: center;
-<<<<<<< HEAD
-  bottom: 40px;
-  div{
-=======
   margin-top: 650px;
   div {
->>>>>>> c673a0dbf627311a0f9619115bd255e6a43c933b
     border: 2px solid $midp;
     padding: 5px;
     border-radius: 10px;
