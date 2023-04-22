@@ -1,5 +1,6 @@
 <?php
 include_once 'src/DB_connect.php';
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +10,8 @@ include_once 'src/DB_connect.php';
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles/style.css" />
+  <!--bootstrap for scroll to top button-->
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
   <link rel="shortcut icon" href="styles/img/manette.png">
   <title>Medoka Games</title>
 </head>
@@ -25,8 +28,16 @@ include_once 'src/DB_connect.php';
       </ul>
       <div class="spacer"></div>
       <div class="account-info" id="user-info">
-        <button href="#" class=" btn-r" id="login">Login</button>
-        <button href="#" class=" btn-r" id="sign">Sign up</button>
+        <?php
+        if (isset($_SESSION["in"])) {
+          echo '<div>
+              <p>'.$_SESSION["username"].'</p>
+            </div>
+            <img src="styles/img/user.png" alt="user image" height="60">';
+        } else {
+          echo '<button href="#" class=" btn-r" id="login">Login</button><button href="#" class=" btn-r" id="sign">Sign up</button>';
+        }
+        ?>
       </div>
       <i class="fa fa-bars fa-2xl" id="menu-icon" onclick="open_sidebar()"></i>
       <div class="sidebar" id="sidebar">
@@ -178,7 +189,7 @@ include_once 'src/DB_connect.php';
           <div class="panel__forms">
 
             <!-- Login Form -->
-            <form class="form panel__login-form" id="login-form" method="post" action="/">
+            <form class="form panel__login-form" id="login-form" method="post" action="src/login.php">
               <div class="form__row">
                 <input type="text" id="email" class="form__input" name="login-mail" data-validation="email" data-error="Invalid email address." required>
                 <span class="form__bar"></span>
@@ -192,14 +203,14 @@ include_once 'src/DB_connect.php';
                 <span class="form__error"></span>
               </div>
               <div class="form__row">
-                <input type="submit" class="form__submit" value="Get Started!">
+                <input type="submit" class="form__submit" value="Get Started!" name="submit">
                 <a href="#password-form" class="form__retrieve-pass" role="button">Forgot Password?</a>
               </div>
             </form>
 
             <!-- Register Form -->
             <form class="form panel__register-form" id="register-form" method="post" action="src/add_user.php">
-            <div class="form__row">
+              <div class="form__row">
                 <input type="text" id="register-username" class="form__input" name="register-username" data-validation="length" data-validation-length="5-15" data-error="username must contain 5-15 characters" required>
                 <span class="form__bar"></span>
                 <label for="register-username" class="form__label">username</label>
