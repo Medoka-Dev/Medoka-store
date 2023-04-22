@@ -21,8 +21,9 @@ create table games (
     label varchar(50) unique not null,
     genre varchar(50) not null,
     release_date Date not null,
-    img BLOB not null,
+    image varchar(50) not null,
     company varchar(50) not null,
+    description varchar(600) ,
     price int(4) not null
 );
 create table likes (
