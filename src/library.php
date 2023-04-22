@@ -1,4 +1,5 @@
 <?php
+
 function unameExists($conn, $username, $email)
 {
     $stmt = $conn->prepare("SELECT * FROM users where username = ? OR email = ?;");
@@ -20,4 +21,25 @@ function add_user($conn, $username, $email, $pwd)
     $stmt->bind_param("sss", $username, $hashed_pwd, $email);
     $stmt->execute();
     $stmt->close();
+}
+
+function get_account($conn, $email, $password)
+{
+    $stmt = $conn->prepare("SELECT * FROM users where email = ?;");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $stmt->store_result();
+    $row=[];
+    $stmt->bind_result($row["user_id"],$row["username"],$row["password"],$row["email"]);
+    if ($stmt->fetch()) {
+        $stmt->close();
+        if (password_verify($password,$row["password"])) {
+            return $row;
+        } else {
+            return null;
+        }
+    } else {
+        $stmt->close();
+        return null;
+    }
 }
