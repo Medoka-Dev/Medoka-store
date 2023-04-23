@@ -98,7 +98,7 @@ session_start();
         <div class="star"></div>
       </div>
       <div class="title-section">
-        <img src="styles/img/via.png" />
+        <img src="styles/img/test1.png" />
         <p>get the best games at the lowest price</p>
       </div>
     </header>

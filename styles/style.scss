@@ -292,10 +292,11 @@ input {
 //* end of modals
 body {
   overflow-x: hidden;
+  width: 100%;
 }
 
 .the_horse_bug {
-  position: absolute;
+  position: relative;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -434,19 +435,20 @@ nav {
 }
 
 .title-section {
+  padding: 40px;
+  text-align: center;
   img {
-    margin: 0 20px;
-    width: 90vmin;
-    height: 15.2vmin;
-    opacity: 90%;
+    text-align: center;
+    width: 60%;
+    height: 60%;
   }
 
   p {
-    margin: 0 10px;
-    font-size: $fh2;
+    margin-top: 40px;
+    font-size: 35px;
     color: $white;
     text-align: center;
-    margin-top: 50px;
+    text-transform: capitalize;
   }
 }
 
@@ -846,6 +848,7 @@ i {
 .socialinfo {
   padding: 40px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   color: $white;
 }
