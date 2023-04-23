@@ -43,3 +43,18 @@ function get_account($conn, $email, $password)
         return null;
     }
 }
+
+function is_loved($conn,$gid,$uid)
+{
+    $stmt = $conn->prepare("SELECT * FROM likes where user_id = ? AND game_id = ?;");
+    $stmt->bind_param("ss", $uid, $gid);
+    $stmt->execute();
+    $stmt->store_result();
+    if ($stmt->num_rows > 0) {
+        $stmt->close();
+        return true;
+    } else {
+        $stmt->close();
+        return false;
+    }
+}

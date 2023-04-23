@@ -1,11 +1,11 @@
 <?php
 include_once 'src/DB_connect.php';
+include_once 'src/library.php';
 session_start();
-include_once "DB_connect.php";
 $games = $conn->prepare("SELECT game_id,label,genre,image,price FROM games;");
 $games->execute();
 $games->store_result();
-$games->bind_result($gid,$name, $genre, $image, $price);
+$games->bind_result($gid, $name, $raw_genres, $image, $price);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +17,7 @@ $games->bind_result($gid,$name, $genre, $image, $price);
   <link rel="stylesheet" href="styles/style.css" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
   <link rel="shortcut icon" href="styles/img/manette.png">
-  <title>Medoka Games</title>
+  <title>Medoka Store</title>
 </head>
 
 <body onresize="close_sidebar()">
@@ -25,8 +25,9 @@ $games->bind_result($gid,$name, $genre, $image, $price);
     <nav id="navbar" onresize="close_sidebar()">
       <a href="#home"><img src="styles/img/logo.png" class="logo" /></a>
       <ul class="navlist" id="navlist">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#store">Store</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="#">Store</a></li>
+        <?php if (isset($_SESSION["in"])) echo '<li><a href="favourites.php">Favourites</a></li>' ?>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="spacer"></div>
@@ -104,7 +105,7 @@ $games->bind_result($gid,$name, $genre, $image, $price);
         while ($games->fetch()) {
           echo '
         <div class="cardc">
-        <a href="game.php?gid='.$gid.'">
+        <a href="game.php?gid=' . $gid . '">
           <div class="card2">
             <img src="game_images/' . $image . '">
             <div class="t-p">
@@ -112,11 +113,15 @@ $games->bind_result($gid,$name, $genre, $image, $price);
               <h6 class="price">' . $price . 'DT</h6>
               </div>
               <div class="g-b">
-                <div class="genres">
-                  <span>' . $genre . '</span>
-                  <span>Game</span>
-                </div>
-                <a href="#"><button class="buy">Buy</button></a>
+                <div class="genres">';
+          $genres = json_decode($raw_genres);
+          foreach ($genres as $genre) {
+            echo '<span>' . $genre . '</span>';
+          }
+          echo '</div>
+                <a href="#" class="liker">  <input type="hidden" value="'.$gid.'"><button class="buy ';
+          if (isset($_SESSION["uid"]) and is_loved($conn,$gid,$_SESSION["uid"])) echo"fav-active";
+          echo '">Like</button></a>
               </div>
             </div>
             </a>

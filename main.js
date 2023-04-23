@@ -57,13 +57,14 @@ $(function () {
 });
 
 //-login form js
-
-document.getElementById("login").onclick = function () {
-  document.getElementById("registration_form").style.display = "initial";
-};
-document.getElementById("sign").onclick = function () {
-  document.getElementById("registration_form").style.display = "initial";
-};
+if (document.getElementById("login") !== null) {
+  document.getElementById("login").onclick = function () {
+    document.getElementById("registration_form").style.display = "initial";
+  };
+  document.getElementById("sign").onclick = function () {
+    document.getElementById("registration_form").style.display = "initial";
+  };
+}
 $(function () {
   $("form").attr("novalidate", "novalidate");
   $(".panel__link, .form__retrieve-pass").on("click", function (e) {
@@ -94,13 +95,31 @@ setInterval(function () {
   }
 }, 5000);
 //* the cursor effect on the cards in the services section
-document.getElementById("cards").onmousemove = (e) => {
-  for (const card of document.getElementsByClassName("card")) {
-    const rect = card.getBoundingClientRect(),
-      x = e.clientX - rect.left,
-      y = e.clientY - rect.top;
+if (document.getElementById("cards") !== null) {
+  document.getElementById("cards").onmousemove = (e) => {
+    for (const card of document.getElementsByClassName("card")) {
+      const rect = card.getBoundingClientRect(),
+        x = e.clientX - rect.left,
+        y = e.clientY - rect.top;
 
-    card.style.setProperty("--mouse-x", `${x}px`);
-    card.style.setProperty("--mouse-y", `${y}px`);
-  }
-};
+      card.style.setProperty("--mouse-x", `${x}px`);
+      card.style.setProperty("--mouse-y", `${y}px`);
+    }
+  };
+}
+//-this sends a get form to like a game using jquery and ajax
+$(".liker").click(function(){
+  alert
+  var $input = $(this).find('input')
+  $.post("src/like.php",
+  {
+    gid: $input.val()
+  },
+  function(data, status){
+    alert("Data: " + data + "\nStatus: " + status);
+    if (status=="success")
+    {
+      $(this).addClass("fav-active");
+    }
+  });
+});

@@ -9,7 +9,7 @@ INSERT INTO games (
     )
 VALUES (
         'Demonologist',
-        'Horror',
+        '["Horror","Action","Co-op"]',
         '2023-4-27',
         'Demonologist.jpg',
         'Clock Wizard Games',
@@ -27,7 +27,7 @@ INSERT INTO games (
     )
 VALUES (
         'Resident Evil 4',
-        'Horror',
+        '["Horror","Action","Zombies"]',
         '2023-4-27',
         'resident Evil 4.jpg',
         'CAPCOM',
@@ -45,7 +45,7 @@ INSERT INTO games (
     )
 VALUES (
         'Hogwarts Legacy',
-        'Action',
+        '["Action","Fantasy"]',
         '2023-4-27',
         'hogwarts.jpg',
         'Warner Bros. Games',
@@ -63,7 +63,7 @@ INSERT INTO games (
     )
 VALUES (
         'The last of us',
-        'Action',
+        '["Action","Zombies"]',
         '2023-4-27',
         'the last of us.jpg',
         'Sony Interactive Entertainment',
@@ -81,7 +81,7 @@ INSERT INTO games (
     )
 VALUES (
         'The last of us 2',
-        'Action',
+        '["Action","Zombies"]',
         '2023-4-27',
         'The last of us 2.jpg',
         'Sony Interactive Entertainment',
@@ -99,7 +99,7 @@ INSERT INTO games (
     )
 VALUES (
         'Overcooked 2',
-        'Casual',
+        '["Casual","Co-op","Indie"]',
         '2023-4-27',
         'overcooked 2.jpg',
         'Team17',
@@ -117,7 +117,7 @@ INSERT INTO games (
     )
 VALUES (
         'The Witcher 3: Wild Hunt',
-        'Action',
+        '["Action","RPG"]',
         '2023-4-27',
         'the witcher3.jpg',
         'CD PROJEKT RED',
@@ -135,7 +135,7 @@ INSERT INTO games (
     )
 VALUES (
         "Uncharted 4: A Thief's End",
-        'Action',
+        '["Action"]',
         '2023-4-27',
         'uncharted 4.jpg',
         ' PlayStation PC LLC ',
@@ -153,7 +153,7 @@ INSERT INTO games (
     )
 VALUES (
         'Stardew Valley',
-        'Casual',
+        '["Casual","Simulation"]',
         '2017-3-15',
         'stardew valley.jpg',
         'ConcernedApe',
@@ -171,7 +171,7 @@ INSERT INTO games (
     )
 VALUES (
         'Red Dead Redemption 2',
-        'Action',
+        '["Action","Western"]',
         '2010-4-8',
         'rdr2.jpg',
         'Rockstar Games',
@@ -189,7 +189,7 @@ INSERT INTO games (
     )
 VALUES (
         'Valheim',
-        'Action',
+        '["Action","FPS","RPG"]',
         '2010-1-25',
         'Valheim.jpg',
         'Coffee Stain Publishing',
@@ -207,7 +207,7 @@ INSERT INTO games (
     )
 VALUES (
         'Outlast 2',
-        'Horror',
+        '["Horror","Action","Suvivor"]',
         '2012-8-24',
         'Outlast 2.jpg',
         'Red Barrels',
