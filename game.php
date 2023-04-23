@@ -1,6 +1,20 @@
 <?php
 include_once 'src/DB_connect.php';
 session_start();
+include_once "DB_connect.php";
+if (!isset($_GET["gid"])) {
+  header("location: store.php");
+  exit;
+}
+$game = $conn->prepare("SELECT * FROM games where game_id= ?;");
+$game->bind_param("s", $_GET["gid"]);
+$game->execute();
+$game->store_result();
+$game->bind_result($gid, $name, $genre, $raw_release_date, $image, $company, $description, $price);
+if (!$game->fetch()) {
+  header("location: store.php?err=nogame");
+  exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,139 +24,59 @@ session_start();
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles/style.css" />
-  <!--bootstrap for scroll to top button-->
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
   <link rel="shortcut icon" href="styles/img/manette.png">
-  <title>Medoka Games</title>
+  <title><?php echo $name; ?></title>
 </head>
 
 <body onresize="close_sidebar()">
-  <div class="the_horse_bug">
-    <nav id="navbar" onresize="close_sidebar()">
-      <a href="#home"><img src="styles/img/logo.png" class="logo" /></a>
-      <ul class="navlist" id="navlist">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#store">Store</a></li>
-        <li><a href="#contact">Contact</a></li>
+  <nav id="navbar" onresize="close_sidebar()">
+    <a href="#home"><img src="styles/img/logo.png" class="logo" /></a>
+    <ul class="navlist" id="navlist">
+      <li><a href="index.php">Home</a></li>
+      <li><a href="store.php">Store</a></li>
+      <?php if (isset($_SESSION["in"])) echo '<li><a href="favourite.php">Favourite</a></li>'?>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="spacer"></div>
+    <div class="account-info" id="user-info">
+      <button href="#" class="sign btn-r">Login</button>
+      <button href="#" class="login btn-r">Sign up</button>
+    </div>
+    <i class="fa fa-bars fa-2xl" id="menu-icon" onclick="open_sidebar()"></i>
+    <div class="sidebar" id="sidebar">
+      <div id="sidebar-user-info" class="account-info">
+        <!-- *account info gets copied here automatically -->
+      </div>
+      <ul id="sidebar-list">
+        <!-- *the nav list gets copied here automatically -->
       </ul>
-      <div class="spacer"></div>
-      <div class="account-info" id="user-info">
-        <?php
-        if (isset($_SESSION["in"])) {
-          echo '<a href="src/loggerout.php?src=index"><div>
-              <p>' . $_SESSION["username"] . '</p>
-            </div>
-            <img src="styles/img/user.png" alt="user image" height="60"></a>';
-        } else {
-          echo '<button href="#" class=" btn-r" id="login">Login</button><button href="#" class=" btn-r" id="sign">Sign up</button>';
-        }
-        ?>
+    </div>
+  </nav>
+  <div class="game">
+    <div class="image">
+      <img src="game_images/The last of us 2.jpg">
+    </div>
+    <div class="info">
+      <h6 class="company">Sony Interactive Entertainment</h6>
+      <h4 class="game-title">The Last Of Us 2</h4>
+      <h6 class="date">19 June, 2020</h6>
+      <div class="genres">
+        <span>Survival</span>
+        <span>Zombies</span>
+        <span>Action</span>
       </div>
-      <i class="fa fa-bars fa-2xl" id="menu-icon" onclick="open_sidebar()"></i>
-      <div class="sidebar" id="sidebar">
-        <div id="sidebar-user-info" class="account-info">
-          <!-- *account info gets copied here automatically -->
-        </div>
-        <ul id="sidebar-list">
-          <!-- *the nav list gets copied here automatically -->
-        </ul>
-      </div>
-    </nav>
-    <header class="home" id="home">
-      <div class="stars">
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-      </div>
-      <div class="title-section">
-        <img src="styles/img/via.png" />
-        <p>get the best games at the lowest price</p>
-      </div>
-    </header>
-    <!--About us section-->
-    <div id="about" class="about">
-      <img class="about-img" src="styles/img/dragon.png" />
-      <div class="spacer"></div>
-      <div class="about-text">
-        <h3 class="sub-title">About <span>Us</span></h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-          officia, corporis eum maxime odio nulla!
-        </p>
+      <p class="description">
+        Five years after their dangerous journey across the post-pandemic United States, Ellie and Joel have settled down in Jackson, Wyoming. Living amongst a thriving community of survivors has allowed them peace and stability, despite the constant threat of the infected and other, more desperate survivors. When a violent event disrupts that peace, Ellie embarks on a relentless journey to carry out justice and find closure. As she hunts those responsible one by one, she is confronted with the devastating physical and emotional repercussions of her actions.
+      </p>
+
+      <div class="p-b">
+        <h6 class="price">150 DT</h6>
+        <a href="#"><button class="buy">Buy</button></a>
       </div>
     </div>
-    <!--store section-->
-    <div id="store" class="store">
-      <div class="title">
-        <h1><span>Our</span> Store</h1>
-      </div>
-      <div id="cards">
-        <div class="card">
-          <a href="store.php">
-            <div class="card1">
-              <div class="card1-content">
-                <div class="card1-image">
-                  <i><img src="styles/img/showcase_games.jpg" /></i>
-                </div>
-                <div class="card1-info-wrapper">
-                  <div class="card1-info">
-                    <div class="card1-info-title">
-                      <h3>Medoka shop</h3>
-                      <h4>we sell the latest games online</h4>
-                      <h4>click here to visit Via Events</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-    <footer>
+
+  </div>
+  <footer>
       <!--Contact section-->
       <div class="contact" id="contact">
         <h1>Contact <span>Us</span></h1>
@@ -193,7 +127,7 @@ session_start();
                 <span class="form__error"></span>
               </div>
               <div class="form__row">
-                <input type="submit" class="form__submit" value="Get Started!!" name="submit">
+                <input type="submit" class="form__submit" value="Get Started!" name="submit">
                 <a href="#password-form" class="form__retrieve-pass" role="button">Forgot Password?</a>
               </div>
             </form>
@@ -241,19 +175,17 @@ session_start();
           </div>
         </div>
       </div>
-
     </footer>
-  </div>
-  <!-- jQuery CDN -->
-  <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
-  <!-- fontawsome CDN -->
-  <script src="https://kit.fontawesome.com/4f4b2ce8e5.js" crossorigin="anonymous"></script>
-  <!-- personal CDN -->
-  <script src="main.js"></script>
-  <!--Scroll to top button-->
-  <div class="scrolltop">
-    <div class="scroll icon"><i class="fa fa-4x fa-angle-up"></i></div>
-  </div>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <!-- fontawsome CDN -->
+    <script src="https://kit.fontawesome.com/4f4b2ce8e5.js" crossorigin="anonymous"></script>
+    <!-- personal CDN -->
+    <!--Scroll to top button-->
+    <div class="scrolltop">
+      <div class="scroll icon"><i class="fa fa-4x fa-angle-up"></i></div>
+    </div>
+    <script src="main.js"></script>
 </body>
 
 </html>

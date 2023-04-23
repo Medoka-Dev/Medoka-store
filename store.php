@@ -1,12 +1,11 @@
 <?php
 include_once 'src/DB_connect.php';
 session_start();
-include "library.php";
 include_once "DB_connect.php";
-$games = $conn->prepare("SELECT label,genre,image,price FROM games;");
+$games = $conn->prepare("SELECT game_id,label,genre,image,price FROM games;");
 $games->execute();
 $games->store_result();
-$games->bind_result($name, $genre, $image, $price);
+$games->bind_result($gid,$name, $genre, $image, $price);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -105,6 +104,7 @@ $games->bind_result($name, $genre, $image, $price);
         while ($games->fetch()) {
           echo '
         <div class="cardc">
+        <a href="game.php?gid='.$gid.'">
           <div class="card2">
             <img src="game_images/' . $image . '">
             <div class="t-p">
@@ -119,6 +119,7 @@ $games->bind_result($name, $genre, $image, $price);
                 <a href="#"><button class="buy">Buy</button></a>
               </div>
             </div>
+            </a>
           </div>';
         }
         ?>
