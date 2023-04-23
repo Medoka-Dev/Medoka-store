@@ -30,7 +30,7 @@ session_start();
       <div class="account-info" id="user-info">
         <?php
         if (isset($_SESSION["in"])) {
-          echo '<a href="src/loggerout.php"><div>
+          echo '<a href="src/loggerout.php?src=index"><div>
               <p>' . $_SESSION["username"] . '</p>
             </div>
             <img src="styles/img/user.png" alt="user image" height="60"></a>';
@@ -121,7 +121,7 @@ session_start();
       </div>
       <div id="cards">
         <div class="card">
-          <a href="#">
+          <a href="store.php">
             <div class="card1">
               <div class="card1-content">
                 <div class="card1-image">
@@ -193,7 +193,7 @@ session_start();
                 <span class="form__error"></span>
               </div>
               <div class="form__row">
-                <input type="submit" class="form__submit" value="Get Started!" name="submit">
+                <input type="submit" class="form__submit" value="Get Started!!" name="submit">
                 <a href="#password-form" class="form__retrieve-pass" role="button">Forgot Password?</a>
               </div>
             </form>

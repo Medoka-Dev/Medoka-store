@@ -35,7 +35,7 @@ $games->bind_result($name, $genre, $image, $price);
 
         <?php
         if (isset($_SESSION["in"])) {
-          echo '<a href="src/loggerout.php"><div>
+          echo '<a href="src/loggerout.php?src=store"><div>
               <p>' . $_SESSION["username"] . '</p>
             </div>
             <img src="styles/img/user.png" alt="user image" height="60"></a>';
