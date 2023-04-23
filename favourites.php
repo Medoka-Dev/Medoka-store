@@ -1,8 +1,8 @@
 <?php
 include_once 'src/DB_connect.php';
+include_once 'src/library.php';
 session_start();
-if (!isset($_SESSION["uid"])) 
-{
+if (!isset($_SESSION["uid"])) {
     header("location: store.php");
     exit;
 }
@@ -30,9 +30,9 @@ $games->bind_result($gid, $name, $raw_genres, $image, $price);
         <nav id="navbar" onresize="close_sidebar()">
             <a href="#home"><img src="styles/img/logo.png" class="logo" /></a>
             <ul class="navlist" id="navlist">
-                <li><a href="index.php">Home</a></li>
+                <li><a href="#index.php">Home</a></li>
                 <li><a href="store.php">Store</a></li>
-                <?php if (isset($_SESSION["in"])) echo '<li><a href="favourites.php">Favourites</a></li>' ?>
+                <?php if (isset($_SESSION["in"])) echo '<li><a href="favourites.php">Favourite</a></li>' ?>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="spacer"></div>
@@ -80,7 +80,9 @@ $games->bind_result($gid, $name, $raw_genres, $image, $price);
                     }
                     echo '
                 </div>
-                <a href="#"><button class="buy">Buy</button></a>
+                <a href="javascript:void(0)" class="liker">  <input type="hidden" value="' . $gid . '"><button class="buy ';
+                    if (isset($_SESSION["uid"]) and is_loved($conn, $gid, $_SESSION["uid"])) echo "fav-active";
+                    echo '">Like</button></a>
               </div>
             </div>
             </a>

@@ -1,5 +1,6 @@
 <?php
 include_once 'src/DB_connect.php';
+include_once 'src/library.php';
 session_start();
 include_once "DB_connect.php";
 if (!isset($_GET["gid"])) {
@@ -75,7 +76,9 @@ $processed_release_date = date("d/m/Y", strtotime($raw_release_date));
 
       <div class="p-b">
         <h6 class="price"><?php echo $price; ?> DT</h6>
-        <a href="#"><button class="buy">Buy</button></a>
+        <?php echo '<a href="javascript:void(0)" class="liker">  <input type="hidden" value="' . $gid . '"><button class="buy ';
+        if (isset($_SESSION["uid"]) and is_loved($conn, $gid, $_SESSION["uid"])) echo "fav-active";
+        echo '">Like</button></a>' ?>
       </div>
     </div>
 

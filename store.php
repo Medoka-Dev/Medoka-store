@@ -119,8 +119,8 @@ $games->bind_result($gid, $name, $raw_genres, $image, $price);
             echo '<span>' . $genre . '</span>';
           }
           echo '</div>
-                <a href="#" class="liker">  <input type="hidden" value="'.$gid.'"><button class="buy ';
-          if (isset($_SESSION["uid"]) and is_loved($conn,$gid,$_SESSION["uid"])) echo"fav-active";
+                <a href="javascript:void(0)" class="liker">  <input type="hidden" value="' . $gid . '"><button class="buy ';
+          if (isset($_SESSION["uid"]) and is_loved($conn, $gid, $_SESSION["uid"])) echo "fav-active";
           echo '">Like</button></a>
               </div>
             </div>

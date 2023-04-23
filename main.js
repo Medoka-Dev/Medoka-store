@@ -86,14 +86,16 @@ $(function () {
   });
 });
 //-radio buttons
-var counter = 1;
-setInterval(function () {
-  document.getElementById("radio" + counter).checked = true;
-  counter++;
-  if (counter > 4) {
-    counter = 1;
-  }
-}, 5000);
+if (document.getElementById("radio" + counter) !== null) {
+  var counter = 1;
+  setInterval(function () {
+    document.getElementById("radio" + counter).checked = true;
+    counter++;
+    if (counter > 4) {
+      counter = 1;
+    }
+  }, 5000);
+}
 //* the cursor effect on the cards in the services section
 if (document.getElementById("cards") !== null) {
   document.getElementById("cards").onmousemove = (e) => {
@@ -108,18 +110,16 @@ if (document.getElementById("cards") !== null) {
   };
 }
 //-this sends a get form to like a game using jquery and ajax
-$(".liker").click(function(){
-  alert
-  var $input = $(this).find('input')
-  $.post("src/like.php",
-  {
-    gid: $input.val()
-  },
-  function(data, status){
-    alert("Data: " + data + "\nStatus: " + status);
-    if (status=="success")
-    {
-      $(this).addClass("fav-active");
+$(".liker").click(function () {
+  var $input = $(this).find("input");
+  var $button = $(this).find("button");
+  $url = "src/like.php?gid=" + $input.val();
+  $.get($url, function (data, status) {
+    if (data == "liked") {
+      $button.addClass("fav-active");
+    } else {
+      $button.removeClass("fav-active");
     }
   });
 });
+// alert("all good");
