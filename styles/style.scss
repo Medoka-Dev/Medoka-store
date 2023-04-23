@@ -372,6 +372,7 @@ nav {
     flex-basis: 240px;
     padding-top: 5px;
     padding-left: 10px;
+    white-space: nowrap;
     a {
       width: 100%;
       vertical-align: middle;
@@ -421,7 +422,7 @@ nav {
       display: none;
     }
 
-    .account-info {
+    #user-info{
       display: none !important;
     }
   }
@@ -1073,6 +1074,7 @@ body {
 
 .navigation-auto {
   position: absolute;
+  bottom: 40px;
   display: flex;
   width: 100%;
   justify-content: center;
@@ -1176,6 +1178,7 @@ body {
     line-height: 2;
     margin-bottom: 0;
     span {
+      margin-left: 0;
       text-transform: capitalize;
       font-style: normal;
       font-weight: 700;

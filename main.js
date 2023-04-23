@@ -1,14 +1,18 @@
 var sideBar = document.getElementById("sidebar");
 //* copy the content of the navbar in the sidebar
-$( document ).ready(function() {
-  document.getElementById("sidebar-list").innerHTML = document.getElementById("navlist").innerHTML;
-  document.getElementById("sidebar-user-info").innerHTML = document.getElementById("user-info").innerHTML;
+$(document).ready(function () {
+  document.getElementById("sidebar-list").innerHTML =
+    document.getElementById("navlist").innerHTML;
+  document.getElementById("sidebar-user-info").innerHTML =
+    document.getElementById("user-info").innerHTML;
 });
 //* closes the sidebar on click
-$('#sidebar').find('*').on("click",function(){
-  sideBar.style.width = "0px";
-});
-$('#sidebar').on("click",function(){
+$("#sidebar")
+  .find("*")
+  .on("click", function () {
+    sideBar.style.width = "0px";
+  });
+$("#sidebar").on("click", function () {
   sideBar.style.width = "0px";
 });
 //* this function open the side bar
@@ -38,53 +42,65 @@ window.onscroll = function () {
   prevScrollpos = currentScrollPos;
 };
 //* this function is for the scroll to top button (when you scroll down a scroll to top button appears when you click it gets you back to the top)
-$(window).scroll(function() {
-  if ($(this).scrollTop() > 50 ) {
-      $('.scrolltop:hidden').stop(true, true).fadeIn();
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 50) {
+    $(".scrolltop:hidden").stop(true, true).fadeIn();
   } else {
-      $('.scrolltop').stop(true, true).fadeOut();
+    $(".scrolltop").stop(true, true).fadeOut();
   }
 });
-$(function(){$(".scroll").click(function(){$("html,body").animate({scrollTop:$(".home").offset().top},"1000");return false})})
+$(function () {
+  $(".scroll").click(function () {
+    $("html,body").animate({ scrollTop: $(".home").offset().top }, "1000");
+    return false;
+  });
+});
 
+//-login form js
+
+document.getElementById("login").onclick = function () {
+  document.getElementById("registration_form").style.display = "initial";
+};
+document.getElementById("sign").onclick = function () {
+  document.getElementById("registration_form").style.display = "initial";
+};
+$(function () {
+  $("form").attr("novalidate", "novalidate");
+  $(".panel__link, .form__retrieve-pass").on("click", function (e) {
+    e.preventDefault();
+
+    if ($(this).attr("href") === "#password-form") {
+      $(".panel__header").removeClass("active");
+    } else {
+      $(this).parent().addClass("active");
+      $(this).parent().siblings().removeClass("active");
+    }
+    target = $(this).attr("href");
+    $(".panel__forms > form").not(target).hide();
+    $(target).fadeIn(500);
+  });
+
+  $(".panel__prev-btn").on("click", function (e) {
+    $(".panel, .panel_blur").fadeOut(300);
+  });
+});
+//-radio buttons
+var counter = 1;
+setInterval(function () {
+  document.getElementById("radio" + counter).checked = true;
+  counter++;
+  if (counter > 4) {
+    counter = 1;
+  }
+}, 5000);
 //* the cursor effect on the cards in the services section
-document.getElementById("cards").onmousemove = e => {
-  for(const card of document.getElementsByClassName("card")) {
+document.getElementById("cards").onmousemove = (e) => {
+  for (const card of document.getElementsByClassName("card")) {
     const rect = card.getBoundingClientRect(),
-          x = e.clientX - rect.left,
-          y = e.clientY - rect.top;
+      x = e.clientX - rect.left,
+      y = e.clientY - rect.top;
 
     card.style.setProperty("--mouse-x", `${x}px`);
     card.style.setProperty("--mouse-y", `${y}px`);
-  };
-}
-//-login form js
-
-document.getElementById("login").onclick = function() {
-  document.getElementById("registration_form").style.display = "initial";
-}
-document.getElementById("sign").onclick = function() {
-  document.getElementById("registration_form").style.display = "initial";
-}
-$(function() {
-	$("form").attr('novalidate', 'novalidate');
-    $('.panel__link, .form__retrieve-pass').on('click', function(e) {
-
-        e.preventDefault();
-
-        if ($(this).attr('href') === '#password-form') {
-            $('.panel__header').removeClass('active');
-        } else {
-            $(this).parent().addClass('active');
-            $(this).parent().siblings().removeClass('active');
-        }
-        target = $(this).attr('href');
-        $('.panel__forms > form').not(target).hide();
-        $(target).fadeIn(500);
-    });
-
-    $('.panel__prev-btn').on('click', function(e) {
-        $('.panel, .panel_blur').fadeOut(300);
-    });
-});
-
+  }
+};

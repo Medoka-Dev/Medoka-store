@@ -27,12 +27,11 @@ session_start();
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="spacer"></div>
-      <div class="account-info" href="src/loggerout.php id="user-info">
-        
+      <div class="account-info" id="user-info">
         <?php
         if (isset($_SESSION["in"])) {
           echo '<a href="src/loggerout.php"><div>
-              <p>'.$_SESSION["username"].'</p>
+              <p>' . $_SESSION["username"] . '</p>
             </div>
             <img src="styles/img/user.png" alt="user image" height="60"></a>';
         } else {
@@ -162,16 +161,6 @@ session_start();
           <a href="#" class="tiktok"><i class="fa-brands fa-tiktok"></i></a>
         </div>
       </div>
-      <!-- jQuery CDN -->
-      <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
-      <!-- fontawsome CDN -->
-      <script src="https://kit.fontawesome.com/4f4b2ce8e5.js" crossorigin="anonymous"></script>
-      <!-- personal CDN -->
-      <script src="main.js"></script>
-      <!--Scroll to top button-->
-      <div class="scrolltop">
-        <div class="scroll icon"><i class="fa fa-4x fa-angle-up"></i></div>
-      </div>
       <!--* Modals  -->
       <div class="panel" id="registration_form">
         <div class="panel__form-wrapper">
@@ -254,6 +243,16 @@ session_start();
       </div>
 
     </footer>
+  </div>
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+  <!-- fontawsome CDN -->
+  <script src="https://kit.fontawesome.com/4f4b2ce8e5.js" crossorigin="anonymous"></script>
+  <!-- personal CDN -->
+  <script src="main.js"></script>
+  <!--Scroll to top button-->
+  <div class="scrolltop">
+    <div class="scroll icon"><i class="fa fa-4x fa-angle-up"></i></div>
   </div>
 </body>
 
