@@ -2,6 +2,28 @@
 include_once 'src/DB_connect.php';
 session_start();
 ?>
+<?php
+function validate() {
+
+  if (isset($_POST["submitted"])) {
+      if (!isValidEmail($_POST["email"])) {
+          return "<p>Please enter a valid email address.</p>";
+      }
+      if (!isValidPhoneNumber($_POST["phoneNumber"])) {
+          return "<p>Please enter a valid phone number.</p>";
+      }
+
+      //...
+
+      if (updateUser($id, $email, $phoneNumber, $name)) {
+          return "<meta http-equiv='refresh' content='0'>";
+      } else {
+          return "<p>An error occurred! Could not update your profile information!</p>";
+      }
+  }
+
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -104,43 +126,34 @@ session_start();
     </header>
     <!--About us section-->
     <div id="about" class="about">
-      <img class="about-img" src="styles/img/dragon.png" />
+      <div class="about-image">
+        <img src="styles/img/games.png">
+      </div>
       <div class="spacer"></div>
       <div class="about-text">
         <h3 class="sub-title">About <span>Us</span></h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-          officia, corporis eum maxime odio nulla!
+        Our goal is to provide high quality products at competitive prices and to provide exceptional customer service. We work to offer the latest releases as well as the classic games that have marked the history of video games.
         </p>
       </div>
-    </div>
-    <!--store section-->
-    <div id="store" class="store">
-      <div class="title">
-        <h1><span>Our</span> Store</h1>
       </div>
-      <div id="cards">
-        <div class="card">
-          <a href="store.php">
-            <div class="card1">
-              <div class="card1-content">
-                <div class="card1-image">
-                  <i><img src="styles/img/showcase_games.jpg" /></i>
-                </div>
-                <div class="card1-info-wrapper">
-                  <div class="card1-info">
-                    <div class="card1-info-title">
-                      <h3>Medoka shop</h3>
-                      <h4>we sell the latest games online</h4>
-                      <h4>click here to visit Via Events</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
+      <!--store section-->
+      <div id="store" class="store">
+      <div class="store-img">
+        <img src="styles/img/bg2.png">
+        <div class="sub-title"><span>Our</span>Store</div>
+        <button class="play">P L A Y
+        <div id="clip">
+          <div id="leftTop" class="corner"></div>
+          <div id="rightBottom" class="corner"></div>
+          <div id="rightTop" class="corner"></div>
+          <div id="leftBottom" class="corner"></div>
         </div>
-      </div>
+        <span id="rightArrow" class="arrow"></span>
+        <span id="leftArrow" class="arrow"></span>
+        </button>
+        </div>
+      
     </div>
     <footer>
       <!--Contact section-->
@@ -254,6 +267,13 @@ session_start();
   <div class="scrolltop">
     <div class="scroll icon"><i class="fa fa-4x fa-angle-up"></i></div>
   </div>
+  <script>
+    $(".option").click(function(){
+   $(".option").removeClass("active");
+   $(this).addClass("active");
+   
+});
+  </script>
 </body>
 
 </html>

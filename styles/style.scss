@@ -570,30 +570,36 @@ nav {
 //*about section
 .about {
   width: 100vw;
-  height: 80%;
-  background-image: radial-gradient(
-    farthest-corner at 97vw 95vh,
-    #212121 0%,
-    black 100%
-  );
+  height: auto;
+  background-image: radial-gradient(farthest-corner at 97vw 95vh,#212121 0%,black 100%);
   background-size: cover;
-  padding: 100px 50px;
+  padding: 70px 50px;
   display: flex;
   justify-content: space-around;
-  flex-direction: row;
+  flex-direction: wrap;
 
-  img {
-    width: 417.5px;
+  .spacer{
+    flex-basis: 3%;
+  }
+  .about-image{
+    width: 50%;
     height: auto;
-    max-width: 70vw;
+    img{
+      width: 100%;
+      height: 100%;
+      opacity: 0.9;
+      border-radius: 30px;
+      transition: 0.5s ease-out;
+      cursor: pointer;
+    }
+    :hover{
+      transform: scale(1.05);
+    }
   }
-
-  .spacer {
-    flex-basis: 15%;
-  }
+  
 
   .about-text {
-    margin-left: 50px;
+    width: 40%;
 
     p {
       color: $white;
@@ -619,6 +625,9 @@ nav {
   }
 }
 
+
+
+
 @media only screen and (max-width: 850px) {
   .about {
     flex-direction: column-reverse;
@@ -637,205 +646,232 @@ nav {
   }
 }
 
+
 //*store section
 .store {
   width: 100vw;
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  background-image: radial-gradient(
-    farthest-corner at 97vw 95vh,
-    #212121 0%,
-    black 100%
-  );
+  height: 100vh;
   background-size: cover;
-  padding: 80px 50px;
   justify-items: center;
-}
+  .store-img{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    opacity: 0.5;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    .sub-title{
+      position: absolute;
+      left: 50%;
+      top: 5%;
 
-.title h1 {
-  font-size: 50px;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 80px;
-
-  span {
-    color: $midp;
-    font-size: 50px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    text-align: center;
+    }
+    .play{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    cursor: pointer;
+    }
   }
 }
 
-//*The store cards
-#cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-items: center;
-  justify-content: space-around;
-}
+//*play button
 
-#cards:hover > .card1::after {
-  opacity: 10%;
-}
-
-.card {
+.play{
+  width: 11em;
+  height: 4em;
+  outline: none;
+  transition: 0.1s;
   background-color: transparent;
-  border-radius: 10px;
-  border: 3px solid #303030;
-  display: flex;
-  width: 325px;
-  height: 375px;
-  min-width: 300px;
-  min-height: 350px;
-  flex-direction: column;
-  position: relative;
-  cursor: pointer;
+  border: none;
+  font-size: 13px;
+  font-weight: bold;
+  color: #ddebf0;
 }
 
-.card1:hover::before {
-  opacity: 1;
-}
-
-.card1::before,
-.card1::after {
-  border-radius: inherit;
-  content: "";
-  height: 100%;
-  left: 0px;
-  opacity: 0;
+#clip {
+  --color: #8466bc;
   position: absolute;
-  top: 0px;
-  transition: opacity 0.5s;
-  width: 100%;
-}
-
-.card1::before {
-  background: radial-gradient(
-    800px circle at var(--mouse-x) var(--mouse-y),
-    rgba(255, 255, 255, 0.06),
-    transparent 40%
-  );
-  z-index: 3;
-}
-
-.card1::after {
-  background: radial-gradient(
-    600px circle at var(--mouse-x) var(--mouse-y),
-    rgba(255, 255, 255, 0.4),
-    transparent 40%
-  );
-  z-index: 1;
-}
-
-.card1 > .card1-content {
-  background-color: var(--card1-color);
-  border-radius: inherit;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  inset: 1px;
-  padding: 10px;
-  position: absolute;
-  z-index: 0;
-}
-
-/* -- ↓ ↓ ↓ extra card1 content styles ↓ ↓ ↓ -- */
-
-h1,
-h2,
-h3,
-h4,
-span {
-  color: $white;
-  font-weight: 400;
-  margin: 0px;
-}
-
-i {
-  color: $white;
-}
-
-.card1-image {
-  margin-top: 20px;
-  align-items: center;
-  display: flex;
-  height: 140px;
-  justify-content: center;
+  top: 0;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border: 5px double var(--color);
+  box-shadow: inset 0px 0px 15px $lightp;
+  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
 
-  img {
-    height: 200px;
-    width: 300px;
+.arrow {
+  position: absolute;
+  transition: 0.2s;
+  background-color: #8466bc;
+  top: 35%;
+  width: 11%;
+  height: 30%;
+}
+
+#leftArrow {
+  left: -13.5%;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 50%);
+}
+
+#rightArrow {
+  -webkit-clip-path: polygon(100% 49%, 0 0, 0 100%);
+  left: 102%;
+}
+
+.play:hover #rightArrow {
+  background-color: $lightp;
+  left: -15%;
+  animation: 0.6s ease-in-out both infinite alternate rightArrow8;
+}
+
+.play:hover #leftArrow {
+  background-color: $lightp;
+  left: 103%;
+  animation: 0.6s ease-in-out both infinite alternate leftArrow8;
+}
+
+.corner {
+  position: absolute;
+  width: 4em;
+  height: 4em;
+  background-color: #8466bc;
+  box-shadow: inset 1px 1px 8px #7c699f;
+  transform: scale(1) rotate(45deg);
+  transition: 0.2s;
+}
+
+#rightTop {
+  top: -1.98em;
+  left: 91%;
+}
+
+#leftTop {
+  top: -1.96em;
+  left: -3.0em;
+}
+
+#leftBottom {
+  top: 2.10em;
+  left: -2.15em;
+}
+
+#rightBottom {
+  top: 45%;
+  left: 88%;
+}
+
+.play:hover #leftTop {
+  animation: 0.1s ease-in-out 0.05s both changeColor8,
+  0.2s linear 0.4s both lightEffect8;
+}
+
+.play:hover #rightTop {
+  animation: 0.1s ease-in-out 0.15s both changeColor8,
+  0.2s linear 0.4s both lightEffect8;
+}
+
+.play:hover #rightBottom {
+  animation: 0.1s ease-in-out 0.25s both changeColor8,
+  0.2s linear 0.4s both lightEffect8;
+}
+
+.play:hover #leftBottom {
+  animation: 0.1s ease-in-out 0.35s both changeColor8,
+  0.2s linear 0.4s both lightEffect8;
+}
+
+.play:hover .corner {
+  transform: scale(1.25) rotate(45deg);
+}
+
+.play:hover #clip {
+  animation: 0.2s ease-in-out 0.55s both greenLight8;
+  --color: $lightp;
+}
+
+@keyframes changeColor8 {
+  from {
+    background-color: #8466bc;
+  }
+
+  to {
+    background-color: $lightp;
   }
 }
 
-.card1-image > i {
-  font-size: 6em;
-  opacity: 0.9;
+@keyframes lightEffect8 {
+  from {
+    box-shadow: 1px 1px 5px #7c699f;
+  }
+
+  to {
+    box-shadow: 0 0 2px #bd9bc3;
+  }
 }
 
-.card1-info-wrapper {
-  align-items: center;
-  display: flex;
-  flex-grow: 1;
-  justify-content: flex-start;
-  padding: 0px 20px;
+@keyframes greenLight8 {
+  from {
+  }
+
+  to {
+    box-shadow: inset 0px 0px 32px #7c699f;
+  }
 }
 
-.card1-info {
-  margin-left: 15px;
-  align-items: flex-start;
-  display: flex;
-  gap: 10px;
+@keyframes leftArrow8 {
+  from {
+    transform: translate(0px);
+  }
+
+  to {
+    transform: translateX(10px);
+  }
 }
 
-.card1-info > i {
-  font-size: 1em;
-  height: 20px;
-  line-height: 20px;
+@keyframes rightArrow8 {
+  from {
+    transform: translate(0px);
+  }
+
+  to {
+    transform: translateX(-10px);
+  }
 }
 
-.card1-info-title > h3 {
-  font-size: 1.1em;
-  line-height: 20px;
-  text-align: center;
-}
 
-.card1-info-title > h4 {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.85em;
-  margin-top: 8px;
-  text-align: center;
-}
+//*end of play button
 
 //* Contact section
+
 //* Question part
+
 .contact {
   width: 100vw;
   height: auto;
   background-color: $black;
   background-size: cover;
   padding: 30px 50px;
-}
 
-.contact {
-  h1 {
+    h1 {
     font-size: 50px;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    color: $white;
     text-align: center;
-    margin-bottom: 30px;
 
     span {
       font-size: 50px;
       font-weight: 600;
       margin-bottom: 10px;
-      text-align: center;
-      margin-bottom: 50px;
       color: $midp;
+      margin-bottom: 10px;
     }
   }
 }
@@ -861,9 +897,13 @@ i {
   justify-content: center;
   color: $white;
 }
+i{
+  color: $white;
+}
 
 .fa-solid {
   padding: 10px;
+  color: $white;
 }
 
 .socialinfo p:first-child {
@@ -1151,7 +1191,7 @@ body {
 
 .cardc {
   width: 384px;
-  height: 296px;
+  height: 305px;
   background-image: linear-gradient(162deg, $lightp 0%, $darkp 100%);
   border-radius: 20px;
   transition: all 0.3s;
@@ -1164,7 +1204,7 @@ body {
 
 .card2 {
   width: 384px;
-  height: 296px;
+  height: 305px;
   background-color: #111111;
   border-radius: 5px;
   transition: all 0.2s;
@@ -1178,6 +1218,10 @@ body {
     color: $pink;
     text-transform: capitalize;
   }
+  .price{
+    color: $pink;
+    font-size: smaller;
+  }
 
   .t-p {
     margin-top: 5px;
@@ -1186,7 +1230,7 @@ body {
   }
 
   .g-b {
-    margin-top: 5px;
+    margin-top: 2px;
     justify-content: space-around;
     display: flex;
   }
@@ -1223,22 +1267,20 @@ body {
 }
 
 .buy {
-  padding: 9px 15px 8px;
+  padding: 6px 15px 5px;
   border-radius: 20px;
   border: 0;
   background-color: $midp;
   box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 13px;
   transition: all 0.5s ease;
   color: $white;
   cursor: pointer;
   text-align: end;
 }
-.fav-active {
-  background-color: red;
-}
+
 .buy:hover {
   letter-spacing: 3px;
   background-color: $pink;
@@ -1315,12 +1357,20 @@ body {
     font-size: 20px;
     font-weight: 300;
   }
-
-  .game-title {
-    color: $midp;
-    font-size: 60px;
-    font-weight: 400;
+  .t-l{
+    display: flex;
+    justify-content: space-between;
+    .game-title {
+      color: $midp;
+      font-size: 60px;
+      font-weight: 400;
+    }
+    .like{
+      margin-right: 20px;
+    }
   }
+
+  
 
   .date {
     color: $lightp;
@@ -1364,3 +1414,54 @@ body {
     background-image: linear-gradient(162deg, $lightp 0%, $darkp 100%);
   }
 }
+
+//*favorites button
+.like{
+  background-color:transparent;
+  border:0px;
+    align-items: center;
+    padding: 0 3px 0 0;
+  }
+  .like:hover {
+    transform: scale(105%);
+  }
+  
+  .like svg {
+    fill: rgb(255, 110, 110);
+  }
+  
+  .filled {
+    position: absolute;
+    opacity: 0;
+    left:1px;
+  }
+  
+  @keyframes beatingHeart {
+    0% {
+      transform: scale(1);
+    }
+  
+    15% {
+      transform: scale(1.15);
+    }
+  
+    30% {
+      transform: scale(1);
+    }
+  
+    45% {
+      transform: scale(1.15);
+    }
+  
+    60% {
+      transform: scale(1);
+    }
+  }
+  
+  button:hover .filled {
+    opacity: 1;
+    animation: beatingHeart 1.2s infinite;
+  }
+  .fav-active {
+    background-color: rgb(255, 110, 110);
+  }
