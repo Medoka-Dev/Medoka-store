@@ -1221,7 +1221,59 @@ body {
     border-color: white;
   }
 }
+/*favorites button*/
+.like {
+  background-color: transparent;
+  border: 0px;
+  align-items: center;
+  padding: 0 3px 0 0;
+}
+.like:hover {
+  transform: scale(105%);
+}
 
+.like svg {
+  fill: rgb(255, 110, 110);
+}
+
+.filled {
+  position: absolute;
+  opacity: 0;
+  left: 1px;
+}
+
+@keyframes beatingHeart {
+  0% {
+    transform: scale(1);
+  }
+
+  15% {
+    transform: scale(1.15);
+  }
+
+  30% {
+    transform: scale(1);
+  }
+
+  45% {
+    transform: scale(1.15);
+  }
+
+  60% {
+    transform: scale(1);
+  }
+}
+
+button:hover .filled {
+  opacity: 1;
+  animation: beatingHeart 1.2s infinite;
+}
+.fav-active {
+  transform: scale(105%);
+  .filled{
+    opacity: 1;
+  }
+}
 .buy {
   padding: 9px 15px 8px;
   border-radius: 20px;
@@ -1236,9 +1288,7 @@ body {
   cursor: pointer;
   text-align: end;
 }
-.fav-active {
-  background-color: red;
-}
+
 .buy:hover {
   letter-spacing: 3px;
   background-color: $pink;
@@ -1315,11 +1365,17 @@ body {
     font-size: 20px;
     font-weight: 300;
   }
-
-  .game-title {
-    color: $midp;
-    font-size: 60px;
-    font-weight: 400;
+  .t-l {
+    display: flex;
+    justify-content: space-between;
+    .game-title {
+      color: $midp;
+      font-size: 60px;
+      font-weight: 400;
+    }
+    .like {
+      margin-right: 20px;
+    }
   }
 
   .date {
@@ -1339,7 +1395,6 @@ body {
     color: $midp;
   }
 }
-
 @media only screen and (max-width: 1280px) {
   .game {
     width: 100vw;

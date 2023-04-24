@@ -16,7 +16,7 @@ if (!$game->fetch()) {
   header("location: store.php?err=nogame");
   exit;
 }
-$processed_release_date = date("d/m/Y", strtotime($raw_release_date));
+$processed_release_date = date("d F,Y", strtotime($raw_release_date));
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,6 +56,45 @@ $processed_release_date = date("d/m/Y", strtotime($raw_release_date));
   </nav>
   <div class="game">
     <div class="image">
+      <img <?php echo 'src="game_images/' . $image . '"'; ?> />
+    </div>
+    <div class="info">
+      <h6 class="company"><?php echo $company; ?></h6>
+      <div class="t-l">
+        <h4 class="game-title"><?php echo $name; ?></h4>
+        <a href="javascript:void(0)" class="liker">
+          <?php echo '<input type="hidden" value="' . $gid . '"><button class="like ';
+          if (isset($_SESSION["uid"]) and is_loved($conn, $gid, $_SESSION["uid"])) echo "fav-active";
+          echo '">' ?>
+          <svg class="empty" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
+            <path fill="none" d="M0 0H24V24H0z"></path>
+            <path d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2zm-3.566 15.604c.881-.556 1.676-1.109 2.42-1.701C18.335 14.533 20 11.943 20 9c0-2.36-1.537-4-3.5-4-1.076 0-2.24.57-3.086 1.414L12 7.828l-1.414-1.414C9.74 5.57 8.576 5 7.5 5 5.56 5 4 6.656 4 9c0 2.944 1.666 5.533 4.645 7.903.745.592 1.54 1.145 2.421 1.7.299.189.595.37.934.572.339-.202.635-.383.934-.571z"></path>
+          </svg>
+          <svg class="filled" height="30" width="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0H24V24H0z" fill="none"></path>
+            <path d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2z"></path>
+          </svg>
+          </button>
+        </a>
+      </div>
+      <h6 class="date"><?php echo $processed_release_date; ?></h6>
+      <div class="genres">
+        <?php
+        $genres = json_decode($raw_genres);
+        foreach ($genres as $genre) {
+          echo '<span>' . $genre . '</span>';
+        }
+        ?>
+      </div>
+      <p class="description"><?php echo $description; ?></p>
+      <div class="p-b">
+        <h6 class="price"><?php echo $price; ?> DT</h6>
+        <button class="buy">Buy</button>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="game">
+    <div class="image">
       <img <?php echo 'src="game_images/' . $image . '"'; ?>>
     </div>
     <div class="info">
@@ -76,13 +115,13 @@ $processed_release_date = date("d/m/Y", strtotime($raw_release_date));
 
       <div class="p-b">
         <h6 class="price"><?php echo $price; ?> DT</h6>
-        <?php echo '<a href="javascript:void(0)" class="liker">  <input type="hidden" value="' . $gid . '"><button class="buy ';
+        <?php echo '<input type="hidden" value="' . $gid . '"><button class="like ';
         if (isset($_SESSION["uid"]) and is_loved($conn, $gid, $_SESSION["uid"])) echo "fav-active";
         echo '">Like</button></a>' ?>
       </div>
     </div>
 
-  </div>
+  </div> -->
   <footer>
     <!--Contact section-->
     <div class="contact" id="contact">
