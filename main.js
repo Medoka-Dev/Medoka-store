@@ -86,7 +86,6 @@ $(function () {
   });
 });
 //-radio buttons
-if (document.getElementById("radio" + counter) !== null) {
   var counter = 1;
   setInterval(function () {
     document.getElementById("radio" + counter).checked = true;
@@ -95,7 +94,6 @@ if (document.getElementById("radio" + counter) !== null) {
       counter = 1;
     }
   }, 5000);
-}
 //* the cursor effect on the cards in the services section
 if (document.getElementById("cards") !== null) {
   document.getElementById("cards").onmousemove = (e) => {
