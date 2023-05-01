@@ -1,5 +1,19 @@
-var sideBar = document.getElementById("sidebar");
+//* logout pop up
+var logout_btn = document.getElementById("logouter");
+if (logout_btn !== null) {
+  logout_btn.onclick = function () {
+    Swal.fire({
+      title: 'Do you want to log out?',
+      showCancelButton: true,
+      confirmButtonText: 'logout',
+      confirmButtonColor: '#fc0303',
+    }).then((result) => {
+      window.location.href = 'src/loggerout.php?src='+window.location.href;
+    })
+  };
+}
 //* copy the content of the navbar in the sidebar
+var sideBar = document.getElementById("sidebar");
 $(document).ready(function () {
   document.getElementById("sidebar-list").innerHTML =
     document.getElementById("navlist").innerHTML;
@@ -86,27 +100,14 @@ $(function () {
   });
 });
 //-radio buttons
-  var counter = 1;
-  setInterval(function () {
-    document.getElementById("radio" + counter).checked = true;
-    counter++;
-    if (counter > 4) {
-      counter = 1;
-    }
-  }, 5000);
-//* the cursor effect on the cards in the services section
-if (document.getElementById("cards") !== null) {
-  document.getElementById("cards").onmousemove = (e) => {
-    for (const card of document.getElementsByClassName("card")) {
-      const rect = card.getBoundingClientRect(),
-        x = e.clientX - rect.left,
-        y = e.clientY - rect.top;
-
-      card.style.setProperty("--mouse-x", `${x}px`);
-      card.style.setProperty("--mouse-y", `${y}px`);
-    }
-  };
-}
+var counter = 1;
+setInterval(function () {
+  document.getElementById("radio" + counter).checked = true;
+  counter++;
+  if (counter > 4) {
+    counter = 1;
+  }
+}, 5000);
 //-this sends a get form to like a game using jquery and ajax
 $(".liker").click(function () {
   var $input = $(this).find("input");
@@ -120,4 +121,17 @@ $(".liker").click(function () {
     }
   });
 });
-// alert("all good");
+//* the cursor effect on the cards in the services section
+if (document.getElementById("cards") !== null) {
+  document.getElementById("cards").onmousemove = (e) => {
+    for (const card of document.getElementsByClassName("card")) {
+      const rect = card.getBoundingClientRect(),
+        x = e.clientX - rect.left,
+        y = e.clientY - rect.top;
+
+      card.style.setProperty("--mouse-x", `${x}px`);
+      card.style.setProperty("--mouse-y", `${y}px`);
+    }
+  };
+}
+// - record form
