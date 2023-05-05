@@ -36,13 +36,21 @@ $processed_release_date = date("d F,Y", strtotime($raw_release_date));
     <ul class="navlist" id="navlist">
       <li><a href="index.php">Home</a></li>
       <li><a href="store.php">Store</a></li>
-      <?php if (isset($_SESSION["in"])) echo '<li><a href="favourite.php">Favourite</a></li>' ?>
+      <?php if (isset($_SESSION["in"])) echo '<li><a href="favourites.php">Favourite</a></li>' ?>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="spacer"></div>
     <div class="account-info" id="user-info">
-      <button href="#" class="sign btn-r">Login</button>
-      <button href="#" class="login btn-r">Sign up</button>
+      <?php
+      if (isset($_SESSION["in"])) {
+        echo '<a id="logouter"><div>
+              <p>' . $_SESSION["username"] . '</p>
+            </div>
+            <img src="styles/img/user.png" alt="user image" height="60"></a>';
+      } else {
+        echo '<button href="#" class=" btn-r" id="login">Login</button><button href="#" class=" btn-r" id="sign">Sign up</button>';
+      }
+      ?>
     </div>
     <i class="fa fa-bars fa-2xl" id="menu-icon" onclick="open_sidebar()"></i>
     <div class="sidebar" id="sidebar">
@@ -163,7 +171,7 @@ $processed_release_date = date("d F,Y", strtotime($raw_release_date));
             <div class="form__row">
               <input type="text" id="email" class="form__input" name="login-mail" data-validation="email" data-error="Invalid email address." required>
               <span class="form__bar"></span>
-              <label for="email" class="form__label">E-mail</label>
+              <label for="email" class="form__label">E-mail/username</label>
               <span class="form__error"></span>
             </div>
             <div class="form__row">
@@ -222,6 +230,8 @@ $processed_release_date = date("d F,Y", strtotime($raw_release_date));
       </div>
     </div>
   </footer>
+    <!-- sweet alert CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!-- jQuery CDN -->
   <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
   <!-- fontawsome CDN -->

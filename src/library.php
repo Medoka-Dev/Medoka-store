@@ -25,8 +25,8 @@ function add_user($conn, $username, $email, $pwd)
 
 function get_account($conn, $email, $password)
 {
-    $stmt = $conn->prepare("SELECT * FROM users where email = ?;");
-    $stmt->bind_param("s", $email);
+    $stmt = $conn->prepare("SELECT * FROM users where email = ? or username = ?;");
+    $stmt->bind_param("ss", $email,$email);
     $stmt->execute();
     $stmt->store_result();
     $row=[];

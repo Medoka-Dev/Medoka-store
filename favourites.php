@@ -37,10 +37,9 @@ $games->bind_result($gid, $name, $raw_genres, $image, $price);
             </ul>
             <div class="spacer"></div>
             <div class="account-info" id="user-info">
-
                 <?php
                 if (isset($_SESSION["in"])) {
-                    echo '<a href="src/loggerout.php?src=store"><div>
+                    echo '<a id="logouter"><div>
               <p>' . $_SESSION["username"] . '</p>
             </div>
             <img src="styles/img/user.png" alt="user image" height="60"></a>';
@@ -152,7 +151,7 @@ $games->bind_result($gid, $name, $raw_genres, $image, $price);
                             <div class="form__row">
                                 <input type="text" id="email" class="form__input" name="login-mail" data-validation="email" data-error="Invalid email address." required>
                                 <span class="form__bar"></span>
-                                <label for="email" class="form__label">E-mail</label>
+                                <label for="email" class="form__label">E-mail/username</label>
                                 <span class="form__error"></span>
                             </div>
                             <div class="form__row">
@@ -211,7 +210,9 @@ $games->bind_result($gid, $name, $raw_genres, $image, $price);
                 </div>
             </div>
         </footer>
-        <!-- jQuery CDN -->
+          <!-- sweet alert CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- jQuery CDN -->
         <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
         <!-- fontawsome CDN -->
         <script src="https://kit.fontawesome.com/4f4b2ce8e5.js" crossorigin="anonymous"></script>
