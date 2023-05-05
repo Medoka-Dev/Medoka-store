@@ -125,22 +125,22 @@ $processed_release_date = date("d F,Y", strtotime($raw_release_date));
   <footer>
     <!--Contact section-->
     <div class="contact" id="contact">
-      <h1>Contact <span>Us</span></h1>
-      <div class="question">
-        <input type="text" name="question" id="question" required placeholder="Ask us a question" />
-        <button class="q" type="submit">Send</button>
+        <h1>Contact <span>Us</span></h1>
+        <div class="question">
+          <input type="text" name="question" id="question" required placeholder="Ask us a question" />
+          <button class="q" type="submit">Send</button>
+        </div>
+        <div class="socialinfo">
+          <p><i class="fa-solid fa-phone"></i> +216 24 092 623</p>
+          <p><i class="fa-solid fa-envelope"></i> Medoka.games@gmail.com</p>
+        </div>
+        <div class="social">
+          <a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="insta"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="discord"><i class="fa-brands fa-discord"></i></a>
+          <a href="#" class="tiktok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
       </div>
-      <div class="socialinfo">
-        <p><i class="fa-solid fa-phone"></i> +216 24 092 623</p>
-        <p><i class="fa-solid fa-envelope"></i> Medoka.games@gmail.com</p>
-      </div>
-      <div class="social">
-        <a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#" class="insta"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#" class="discord"><i class="fa-brands fa-discord"></i></a>
-        <a href="#" class="tiktok"><i class="fa-brands fa-tiktok"></i></a>
-      </div>
-    </div>
     <!--* Modals  -->
     <div class="panel" id="registration_form">
       <div class="panel__form-wrapper">

@@ -104,7 +104,7 @@ session_start();
     </header>
     <!--About us section-->
     <div id="about" class="about">
-      <img class="about-img" src="styles/img/dragon.png" />
+      <img class="about-img" src="styles/img/log.png" />
       <div class="spacer"></div>
       <div class="about-text">
         <h3 class="sub-title">About <span>Us</span></h3>
@@ -130,9 +130,9 @@ session_start();
                 <div class="card1-info-wrapper">
                   <div class="card1-info">
                     <div class="card1-info-title">
-                      <h3>Medoka shop</h3>
-                      <h4>we sell the latest games online</h4>
-                      <h4>click here to visit Via Events</h4>
+                      <h3>Medoka Shop</h3>
+                      <h4>we sell the latest games online With the best prices</h4>
+                      <h4>click here to visit Medoka Shop</h4>
                     </div>
                   </div>
                 </div>

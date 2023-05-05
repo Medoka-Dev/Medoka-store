@@ -569,8 +569,8 @@ nav {
 
 //*about section
 .about {
-  width: 100vw;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   background-image: radial-gradient(
     farthest-corner at 97vw 95vh,
     #212121 0%,
@@ -586,10 +586,11 @@ nav {
     width: 417.5px;
     height: auto;
     max-width: 70vw;
+    margin-left: 20px;
   }
 
   .spacer {
-    flex-basis: 15%;
+    flex-basis: 10%;
   }
 
   .about-text {
@@ -686,10 +687,10 @@ nav {
   border-radius: 10px;
   border: 3px solid #303030;
   display: flex;
-  width: 325px;
-  height: 375px;
-  min-width: 300px;
-  min-height: 350px;
+  width: 375px;
+  height: 325px;
+  min-width: 350px;
+  min-height: 300px;
   flex-direction: column;
   position: relative;
   cursor: pointer;
